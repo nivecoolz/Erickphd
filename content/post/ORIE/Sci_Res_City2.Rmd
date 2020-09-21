@@ -1,0 +1,697 @@
+---
+title: "Sim CCS City"
+author: "Erick Jones"
+date: 2019-05-03
+categories: ["Systems Modeling"]
+tags: ["Systems Modeling", "Simulation", "cities"]
+---
+
+I extended the work of (Wu and Plantinga 2003) using R and certain equation modififications to investigate how the addition of a light rail line would influence a city.
+
+Cities have housed most of the human race  since 2004 and as a result influence most of the individual, commercial, and industrial energy and GHG patterns. However, city designs, have placed amenities in isolated suburban pockets, the abundance of roads have encouraged sprawl, and zoning laws have discouraged density. Therefore, for this study I will investigate how these choices can positively or negatively influence a city’s environmental footprint.
+
+I extended the work of (Wu and Plantinga 2003) using R and certain equation modififications to investigate how the addition of a light rail line would influence a city. First, I tried to replicate their city without any parks using their parameters. Second, I made some modifications to get the city to a scale that I could represent graphically. Third, I modeled the light rail as an amenity to see the influence it has on the city. Finally, I modeled the light rail so that it reduced travel costs for the citizens close to it instead of providing an amenity value.
+The parameters I used where nearly identical to the (Wu and Plantinga 2003) parameters; however I did have to make some minor modifications. The given utility produced a much larger area then was graphically tractable, so I increased it to 6,000 for all the models excluding the original monocentric model which uses the original utility value. The transport cost for the rail is set to half of the normal transport costs (t¬¬rail=$500). The original parameters are shown in Table 1. 
+
+Wu, Jun Jie, and Andrew J. Plantinga. 2003. “The Influence of Public Open Space on Urban Spatial Structure.” Journal of Environmental Economics and Management 46 (2): 288–309. https://doi.org/10.1016/S0095-0696(03)00023-8.
+
+```{r}
+require(ggplot2)
+require(grid)
+require(gridExtra)
+require(RColorBrewer)
+require(viridis)
+```
+
+```{r}
+
+
+#budget 
+#median income per capita Austin https://www.deptofnumbers.com/income/texas/austin/
+y <- 40000
+
+u <- c(0:150)
+v <- c(0:150)
+
+#Loop to give 15 miles worth of u and v
+
+i <- 0
+j <- 0
+ii <- 1
+
+while(i < 151){
+  
+  j <- 0
+  while(j < 151){
+  u[ii] <- i/5 - 15
+  v[ii] <- j/5 - 15
+  j <- j+1
+  ii <- ii+1
+  }
+  
+  i <- i +1
+  
+}
+
+#distance from center
+x <- sqrt(u^2+v^2)
+
+#transportation cost 50 cents a mile by 320 days
+t <- 1000
+#housing price per sqft vector
+p <- c(0:150)
+#housing consumption (sqft) by mile vector
+q <- c(0:150)
+#general good
+g <- c(0:150)
+#utility level
+V <- 4200
+#alpha for Cobb Douglas
+al <- .5
+#beta for development cobb-douglas
+bt <- 4/3
+#capital 
+c0 <- 0
+
+#amentiy
+ad <- 0.16
+ng <- 1
+d <- 0
+
+#gamma for amenity
+gm <- 0.5
+
+#z distance to amentiy
+z <- sqrt((x-d)^2)
+
+#land rent/acre
+r <- c(0:150)
+#Housing floor space / acre
+s <- c(0:150)
+#ag rent
+#Ausitn is about 8000 https://heritagelandbank.com/announcements/news-events/how-much-average-price-land-texas
+ag <- 8000
+
+
+#Multiplier values
+tm1 <- 1 - 0
+tm2 <- 1 - 0
+tm3 <- 1 - 0
+tm4 <- 1 - 0
+
+im1 <- 1 + 0
+im2 <- 1 + 0
+im3 <- 1 + 0
+im4 <- 1 + 0
+
+am1 <- 1 + 0
+am2 <- 1 + 0
+am3 <- 1 + 0
+am4 <- 1 + 0
+
+
+
+
+
+```
+
+
+```{r}
+#monocentric original model parameters, Iterations to determine Utility Value (V) that gives start of about 100k
+
+
+
+V <- 4000
+
+i <- 1
+
+NN <- c(1:10)
+
+while(i <= 10){
+
+#finding x for various u,v
+x <- sqrt(u^2+v^2)
+
+#z distance to amentiy
+z <- sqrt((x-d)^2)
+
+#amentiy distribution
+am <- 1 + ad*(exp(-ng*z))
+
+#finding the price for various u,v
+p <- (al^al*(1-al)^(1-al)*am^gm*(y-t*x)/V)^(1/al)
+
+#optimal q
+q <- al*(y-t*x)/p
+
+#optimal g
+g <- (1-al)*(y-t*x)
+
+
+
+#theta some funciton of beta
+ph <- ((bt-1)^((bt-1)/bt))/bt
+
+#optimal r
+
+r <- (ph*p)^(bt/(bt-1))
+
+r1 <- ((ph*al)^al * (1-al)^(1-al) * (y-t*x)/V)^(bt/(al*(bt-1)))
+
+#optimal s
+s <- (p/bt)^(1/(bt-1))
+
+s1 <- (bt-1)^(-1/bt) * (r)^(1/bt)
+
+
+
+
+#population n s(floorspaceperacre/ floorspace per household * (size of square (sqmi)) * acres/sqmi * fraction of housing in area)
+n <- s/q * (.2*.2) * 640 * .25  
+#s <- n*q /(1 * 640 * .25 )
+#q <-  s/(n*(1 * 640 * .25 ))
+
+
+
+#Utility Value
+
+U <- q^al*g^(1-al)
+
+dfsc <- data.frame(u,v,x,p,g,q,s,r,U,n)
+
+#delete values where ag rent exceeds land rent
+dfsc1 <- dfsc[(dfsc$r > ag),]
+
+#total population
+NN[i] <- sum(dfsc1$n)
+
+print(V)
+
+V <- V + 50
+
+i <- i + 1
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+dfsc1
+
+
+
+nrow(dfsc1$n)
+sum(dfsc1$n)
+
+NN
+
+
+
+
+
+```
+
+
+```{r}
+#Reseting Parameters for All Cities
+
+
+V <- 4000
+#housing price per sqft vector
+p <- c(0:150)
+#housing consumption (sqft) by mile vector
+q <- c(0:150)
+#general good
+g <- c(0:150)
+
+#land rent/acre
+r <- c(0:150)
+#Housing floor space / acre
+s <- c(0:150)
+
+
+```
+
+```{r}
+
+#City 1
+
+
+#new t,y,and ad multiplication factors
+
+
+
+t <- 1000*tm1
+
+y <- 40000*im1
+
+ad <- 0.16*am1
+
+
+
+#finding x for various u,v
+x <- sqrt(u^2+v^2)
+
+#finding distance to rail
+z <- sqrt((x-d)^2)
+
+
+#amentiy distribution
+am <- 1 + ad*(exp(-ng*z))
+
+#finding the price for various u,v
+p <- (al^al*(1-al)^(1-al)*am^gm*(y-t*x)/V)^(1/al)
+
+#optimal q
+q <- al*(y-t*x)/p
+
+#optimal g
+g <- (1-al)*(y-t*x)
+
+
+#theta some funciton of beta
+ph <- ((bt-1)^((bt-1)/bt))/bt
+
+#optimal r
+
+r <- (ph*p)^(bt/(bt-1))
+
+r1 <- ((ph*al)^al * (1-al)^(1-al) * (y-t*x)/V)^(bt/(al*(bt-1)))
+
+#optimal s
+s <- (p/bt)^(1/(bt-1))
+
+s1 <- (bt-1)^(-1/bt) * (r)^(1/bt)
+
+#Utility Value
+
+U <- q^al*g^(1-al)
+
+
+#population n s(floorspaceperacre/ floorspace per household * (size of square (sqmi)) * acres/sqmi * fraction of housing in area)
+n <- s/q * (.2*.2) * 640 * .25 
+
+nn <- s/q
+
+
+
+dfscm <- data.frame(u,v,t,x,p,g,q,s,r,U,n,nn)
+
+#delete values where ag rent exceeds land rent
+dfscm1 <- dfscm[(dfscm$r > ag),]
+
+head(dfscm1)
+
+#Total Land Area of the City
+
+print('Land Area')
+nrow(dfscm1)*(.2*.2)
+
+max(dfscm1$u)
+max(dfscm1$v)
+
+
+
+#Total Population
+
+print('Population')
+round(sum(dfscm1$n),0)
+
+
+
+
+
+
+p1<-ggplot(dfscm1, aes(x = u, y = v, color = n)) +
+   geom_point(size = 2, shape = 7) +
+  
+  scale_color_viridis(limits = c(5,150), direction = -1) +
+  lims(x=c(-15,15),y=c(-15,15)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'City 1')
+
+
+```
+
+```{r}
+
+#City 2
+
+#new t,y,and ad multiplication factors
+
+t <- 1000*tm2
+
+y <- 40000*im2
+
+ad <- 0.16*am2
+
+
+#finding x for various u,v
+x <- sqrt(u^2+v^2)
+
+#finding distance to rail
+z <- sqrt((x-d)^2)
+
+
+#amentiy distribution
+am <- 1 + ad*(exp(-ng*z))
+
+#finding the price for various u,v
+p <- (al^al*(1-al)^(1-al)*am^gm*(y-t*x)/V)^(1/al)
+
+#optimal q
+q <- al*(y-t*x)/p
+
+#optimal g
+g <- (1-al)*(y-t*x)
+
+
+#theta some funciton of beta
+ph <- ((bt-1)^((bt-1)/bt))/bt
+
+#optimal r
+
+r <- (ph*p)^(bt/(bt-1))
+
+r1 <- ((ph*al)^al * (1-al)^(1-al) * (y-t*x)/V)^(bt/(al*(bt-1)))
+
+#optimal s
+s <- (p/bt)^(1/(bt-1))
+
+s1 <- (bt-1)^(-1/bt) * (r)^(1/bt)
+
+#Utility Value
+
+U <- q^al*g^(1-al)
+
+
+#population n s(floorspaceperacre/ floorspace per household * (size of square (sqmi)) * acres/sqmi * fraction of housing in area)
+n <- s/q * (.2*.2) * 640 * .25 
+
+nn <- s/q
+
+
+
+dfscm <- data.frame(u,v,t,x,p,g,q,s,r,U,n,nn)
+
+#delete values where ag rent exceeds land rent
+dfscm2 <- dfscm[(dfscm$r > ag),]
+
+head(dfscm2)
+
+#Total Land Area of the City
+
+print('Land Area')
+nrow(dfscm2)*(.2*.2)
+
+max(dfscm2$u)
+max(dfscm2$v)
+
+
+
+#Total Population
+
+print('Population')
+round(sum(dfscm2$n),0)
+
+
+
+
+
+
+p2<-ggplot(dfscm2, aes(x = u, y = v, color = n)) +
+   geom_point(size = 2, shape = 7) +
+  
+  scale_color_viridis(limits = c(5,150), direction = -1) +
+  lims(x=c(-15,15),y=c(-15,15)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'City 2')
+
+
+```
+
+```{r}
+#City 3
+
+
+#new t,y,and ad multiplication factors
+
+t <- 1000*tm3
+
+y <- 40000*im3
+
+ad <- 0.16*am3
+
+
+#finding x for various u,v
+x <- sqrt(u^2+v^2)
+
+#finding distance to rail
+z <- sqrt((x-d)^2)
+
+
+#amentiy distribution
+am <- 1 + ad*(exp(-ng*z))
+
+#finding the price for various u,v
+p <- (al^al*(1-al)^(1-al)*am^gm*(y-t*x)/V)^(1/al)
+
+#optimal q
+q <- al*(y-t*x)/p
+
+#optimal g
+g <- (1-al)*(y-t*x)
+
+
+#theta some funciton of beta
+ph <- ((bt-1)^((bt-1)/bt))/bt
+
+#optimal r
+
+r <- (ph*p)^(bt/(bt-1))
+
+r1 <- ((ph*al)^al * (1-al)^(1-al) * (y-t*x)/V)^(bt/(al*(bt-1)))
+
+#optimal s
+s <- (p/bt)^(1/(bt-1))
+
+s1 <- (bt-1)^(-1/bt) * (r)^(1/bt)
+
+#Utility Value
+
+U <- q^al*g^(1-al)
+
+
+#population n s(floorspaceperacre/ floorspace per household * (size of square (sqmi)) * acres/sqmi * fraction of housing in area)
+n <- s/q * (.2*.2) * 640 * .25 
+
+nn <- s/q
+
+
+
+dfscm <- data.frame(u,v,t,x,p,g,q,s,r,U,n,nn)
+
+#delete values where ag rent exceeds land rent
+dfscm3 <- dfscm[(dfscm$r > ag),]
+
+head(dfscm3)
+
+#Total Land Area of the City
+
+print('Land Area')
+nrow(dfscm3)*(.2*.2)
+
+max(dfscm3$u)
+max(dfscm3$v)
+
+
+
+#Total Population
+
+print('Population')
+round(sum(dfscm3$n),0)
+
+
+
+
+
+
+p3 <- ggplot(dfscm3, aes(x = u, y = v, color = n)) +
+   geom_point(size = 2, shape = 7) +
+  
+  scale_color_viridis(limits = c(5,150), direction = -1) +
+  lims(x=c(-15,15),y=c(-15,15)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'City 3')
+
+
+```
+
+
+```{r}
+
+#City 4
+
+#new t,y,and ad multiplication factors
+
+t <- 1000*tm4
+
+y <- 40000*im4
+
+ad <- 0.16*am4
+
+
+#finding x for various u,v
+x <- sqrt(u^2+v^2)
+
+#finding distance to rail
+z <- sqrt((x-d)^2)
+
+
+#amentiy distribution
+am <- 1 + ad*(exp(-ng*z))
+
+#finding the price for various u,v
+p <- (al^al*(1-al)^(1-al)*am^gm*(y-t*x)/V)^(1/al)
+
+#optimal q
+q <- al*(y-t*x)/p
+
+#optimal g
+g <- (1-al)*(y-t*x)
+
+
+#theta some funciton of beta
+ph <- ((bt-1)^((bt-1)/bt))/bt
+
+#optimal r
+
+r <- (ph*p)^(bt/(bt-1))
+
+r1 <- ((ph*al)^al * (1-al)^(1-al) * (y-t*x)/V)^(bt/(al*(bt-1)))
+
+#optimal s
+s <- (p/bt)^(1/(bt-1))
+
+s1 <- (bt-1)^(-1/bt) * (r)^(1/bt)
+
+#Utility Value
+
+U <- q^al*g^(1-al)
+
+
+#population n s(floorspaceperacre/ floorspace per household * (size of square (sqmi)) * acres/sqmi * fraction of housing in area)
+n <- s/q * (.2*.2) * 640 * .25 
+
+nn <- s/q
+
+
+
+dfscm <- data.frame(u,v,t,x,p,g,q,s,r,U,n,nn)
+
+#delete values where ag rent exceeds land rent
+dfscm4 <- dfscm[(dfscm$r > ag),]
+
+head(dfscm4)
+
+#Total Land Area of the City
+
+print('Land Area')
+nrow(dfscm4)*(.2*.2)
+
+max(dfscm4$u)
+max(dfscm4$v)
+
+
+
+#Total Population
+
+print('Population')
+round(sum(dfscm4$n),0)
+
+
+
+
+
+
+p4 <- ggplot(dfscm4, aes(x = u, y = v, color = n)) +
+   geom_point(size = 2, shape = 7) +
+  
+  scale_color_viridis(limits = c(5,150), direction = -1) +
+  lims(x=c(-15,15),y=c(-15,15)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'City 4')
+
+
+```
+
+```{r}
+# Displaying all graphs and Saving All Graphs
+
+
+
+
+#Population Density Across Urban Areas
+pop_den <- grid.arrange(p1,p2,p3,p4, ncol=2, nrow = 2)
+
+
+
+
+
+
+
+#Land and Population Table
+
+lnda <- c(nrow(dfscm1)*(0.2*0.2),nrow(dfscm2)*(0.2*0.2),nrow(dfscm3)*(0.2*0.2),nrow(dfscm4)*(0.2*0.2))
+popg <- c(sum(dfscm1$n),sum(dfscm2$n),sum(dfscm3$n),sum(dfscm4$n))
+lap <- data.frame(Land_Area = lnda, Population = round(popg), Population_Density = round(popg/lnda))
+rownames(lap) <- c('City 1', 'City 2', 'City 3', 'City 4')
+lap
+
+# Multiplier Table
+
+mtable <- data.frame(Income_Multiplier = c(im1, im2, im3, im4), Traffic_Multiplier = c(tm1, tm2, tm3, tm4), Amenity_Multiplier = c(am1, am2, am3, am4) )
+rownames(mtable) <- c('City 1', 'City 2', 'City 3', 'City 4')
+mtable
+
+
+
+```
+
+```{r}
+#Saving files as Pdfs
+
+# pdf("land_pop.pdf", height =2, width = 8.5)
+# grid.table(lap)
+# dev.off()
+
+# ggsave(filename = "pop_den.pdf", pop_den)
+
+```
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
