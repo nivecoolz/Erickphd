@@ -53,7 +53,7 @@ solutions for low-income communities across Texas by working with teams of exper
 [[experience]]
   title = "Researcher"
   company = "Los Alamos National Labs"
-  company_url = "https://www.lanl.gov/discover/news-stories-archive/2019/August/0821-co2-software.php"
+  company_url = "https://www.lanl.gov/discover/science-columns/top-columns-and-blogs/2020/scientific-american-carbon-capture.php"
   location = ""
   date_start = "2020-06-01"
   date_end = "2020-08-07"
