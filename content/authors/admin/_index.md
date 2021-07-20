@@ -1,7 +1,7 @@
 ---
 authors:
 - admin
-bio: Erick Jones is a Ph.D. candidate in Operations Research and Industrial Engineering who develops multi-systems optimization models to analyze how energy systems, water resources, supply chains, urban space, and transportation networks operate in concert to influence economic and environmental well-being.
+bio: Erick Jones Jr. is an assistant professor in the Department of Industrial, Manufacturing, and Systems Engineering at the University of Texas at Arlington who develops multi-systems optimization models to analyze how energy systems, water resources, supply chains, urban space, and transportation networks operate in concert to influence economic and environmental well-being.
 education:
   courses:
   - course: PhD in Operations Research and Industrial Engineering
@@ -13,23 +13,26 @@ education:
   - course: BS in Chemical Engineering 
     institution: Texas A&M University
     year: 2014
-email: "erick.jones@utexas.edu"
+email: "erick.jones@uta.edu"
 interests:
 - Multi-System Optimization
-- Aligning Intermittant Generation and Flexbile Loads
+- Investment and Operation Decision Making Under Uncertainity
 - Emerging Technologies
 - Systems of Systems
 - Food, Energy, Water, Systems
 - Supply Chains
 - Modern Manufacturing
 - Energy Poverty
-- Simulation
+- Energy Generation
+- Water Capture and Reuse
+- Energy and Water Efficiency
+- Resiliance
 - Carbon Capture and Sequestration
 - Climate Change
 organizations:
-- name: University of Texas
-  url: ""
-role: PhD Candidate
+- name: University of Texas at Arlington
+  url: "https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/industrial/"
+role: Assistant Professor
 social:
 - icon: envelope
   icon_pack: fas
@@ -37,6 +40,9 @@ social:
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/engineer_living
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/erickjones2/
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?hl=en&user=03RL76wAAAAJ&scilu=&scisig=AMD79ooAAAAAXsrkYNUo6SGCkxMfNAPTnV5hSopsR6Z6&gmla=AJsN-F4VzSUz-PPILlmSavoO4WfA89bOjhFYjM7uYAZSj_A294mwvPHLPsPztQWnwUBV36SJPGZZ26s5-bSvaO2LhWAVJOZv9dwe6OCVx74sICbMx6XlUg4&sciund=1053528973528943079
@@ -50,12 +56,15 @@ user_groups:
 - Visitors
 ---
 
-Erick Jones is a Ph.D. candidate in Operations Research and Industrial Engineering. He received a B.S. in Chemical Engineering with a minor in Petroleum Engineering from Texas A&M University. As an undergraduate, Erick researched growth mechanisms of single-walled carbon nanotubes. From there, he went to Houston and spent several years working in the design, manufacturing, oil and gas, and HVAC industries. During this time, he traveled around the world and witnessed how basic infrastructure like electricity, HVAC systems, clean water, internet, and banking where lacking and dramatically affected quality of life for the majority of the world’s population. These experiences motivated Erick to pursue research that can enhance quality of life by improving access to sustainable resources, particularly where a lack of physical infrastructure or economic resources presents a major obstacle. 
+Erick Jones Jr. is an assistant professor in the Department of Industrial, Manufacturing, and Systems Engineering at the University of Texas at Arlington. He spent several years working in the design, manufacturing, oil and gas, and HVAC industries. During this time, he traveled around the world and witnessed how basic infrastructure like electricity, HVAC systems, clean water, internet, and banking where lacking and dramatically affected quality of life for the majority of the world’s population. These experiences motivated Erick to pursue research that can enhance quality of life by improving access to sustainable resources and economic opportunities, particularly where a lack of physical infrastructure or economic resources presents a major obstacle. 
 
-In his research, Erick develops multi-systems optimization models to analyze how energy systems, water resources, supply chains, urban space, and transportation networks operate in concert to influence economic and environmental well-being. He has worked with the Texas Energy Poverty Research Institute, Los Alamos National Labs, the Energy Institute, and the Houston Health and Human Services. Erick also participates in education and outreach activities like the Planet Texas 2050 initiative and Science in Residence, which encourages K-12 students to think about climate change and other STEM issues.
+He has worked with the Texas Energy Poverty Research Institute, Los Alamos National Labs, Carbon Solutions, the Energy Institute at the University of Texas at Austin, and the Houston Health Department. Furthermore, Erick believes in diversity of thought, the power of support from policies and organizations, and the necessity of inclusion and awareness and has participated in various education and outreach activities like the All-Earth EcoBot Challenge, Introduce a Girl to Engineering Day, and NSBE’s Walk for Education.
 
-Erick wants to create or participate in a lab that explores how multiple physical and social infrastructure systems can be designed and operated in concert. This lab would need equipment that could collect data from these systems such as advanced meters and IoT sensors, equipment that could receive and transmit this information such as 5G, and equipment to simulate these systems like conveyor systems and distributed energy and water technologies. Labs like the Pecan Street Labs in Austin, the RAID Labs at the University of Texas at Arlington, and the ARIES Labs at NREL provide guidance and inspiration for this lab.
+Erick’s teaching philosophy is based on an active learning approach and utilizes project-based collaborative learning techniques. This creates a more inclusive classroom where students can learn from each other’s strengths improving student outcomes especially underrepresented minorities and woman in engineering. He built this teaching philosophy with experiences as a TA, a Scientist in Residence, and grader for Engineer Your World. His teaching experience, industry experience, and educational background qualify him to teach in areas related to the theory and applications of optimization and simulation modeling, the theory and application of economic and statistical modeling, and foundational engineering science and applications.
 
-The lab would need people with an understanding of modern data collection with cutting edge technologies, modeling techniques, and operations theory. Erick plans to provide instruction in systems modeling, systems engineering, and data collection, analysis, and visualization. Furthermore, he is able to provide a theoretical background on optimization and simulation techniques, supply chains and logistics, and production and inventory control.
+In his research, Erick is committed to finding ways to cost effectively design, build, and operate sustainable, healthy, and social communities, in both urban and rural environments. 
 
+He investigates key questions regarding emerging trends and technologies, the interplays between the macro and systems level, how the Internet of Things (IoT) and new Information and Communication Technologies (ICT) can help create more accurate digital models, and how to use those models to control physical systems with tools like digital twins. I typically use a multi-systems optimization modeling approach, but have used other methods like regression, machine learning, systems dynamics, and agent-based modeling simulation techniques.  
+
+He plans to create a lab that: 1) Runs large-scale experiments on distributed systems (e.g., solar and RWH), smart buildings, net-zero homes, autonomous transportation, and electric vehicle charging. 2) Has servers that can run computationally expensive optimization and simulation models, perform data analytics, monitor and control connected devices, and store large amounts of data; 3) Has IoT and ICT devices like RFID and smart meters to generate data and monitor research activities; 4) Production, inventory control, supply chain, and logistics equipment such as 3D printers and a conveyor system.
 
