@@ -1,76 +1,46 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | Erick Jones</title>
+    <title>Projects on Hugo Apéro</title>
     <link>/project/</link>
-      <atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
-    <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>&amp;copy Erick Jones {2020}</copyright><lastBuildDate>Thu, 17 Sep 2020 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>Projects</title>
-      <link>/project/</link>
-    </image>
-    
+    <description>Recent content in Projects on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 17 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Community Solar for Low-Income Households in the Competitive Market</title>
       <link>/project/community-solar-in-the-competitive-market/</link>
       <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      
       <guid>/project/community-solar-in-the-competitive-market/</guid>
-      <description>&lt;p&gt;Community solar represents a promising deployment strategy for solar in Texas that, if scaled, has the potential to create significant local economic and environmental benefits. In Galveston today, 40% of households make less than $35,000, and 57% of residents rent. Community solar can bring affordable clean energy to Galveston residents and provide a vehicle for local jobs and economic development.&lt;/p&gt;
-&lt;p&gt;The Texas Energy Poverty Research Institute (TEPRI), with the generous support of the Cynthia and George Mitchell Foundation and in coordination with Vision Galveston, is conducting a pre-development seeks to bring an innovative community solar concept to Galveston. Preliminary analysis has identified 31 MW of solar potential, which could supply energy to over 3,600 low-income households on the island.&lt;/p&gt;
-&lt;p&gt;TEPRI has identified several potential community solar host sites on Galveston Island based on aerial analysis, prioritizing buildings with large rooftops and/or large parking lots owned by a single entity. Additionally, we took into consideration entities that have expressed interest in sustainability or clean energy, including through the Vision Galveston Plan. We seek to begin exploratory conversations with potential site hosts to gauge interest and feasibility of hosting a local community solar installation.&lt;/p&gt;
-</description>
+      <description>Looking for ways to integrate Community Solar for Low-Income Households in the Competitive Market</description>
     </item>
     
     <item>
       <title>EAGER AI-Enabled Optimization of the COVID-19 Therapeutics Supply Chain to Support Community Public Health</title>
       <link>/project/covid-19-houston/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
       <guid>/project/covid-19-houston/</guid>
-      <description>&lt;p&gt;EAGER: AI-Enabled Optimization of the COVID-19 Therapeutics Supply Chain to Support Community Public Health&lt;/p&gt;
-&lt;p&gt;NSF Award Number 2028612&lt;/p&gt;
-&lt;p&gt;This EAGER award supports fundamental research in technology-enabled supply chain design to effectively deliver therapeutics to at risk populations in an urban setting. The research has three primary objectives: 1) investigate the Automated Data Capture and Artificial Intelligence needed to automate the COVID-19 Healthcare Supply Chain; 2) model the COVID-19 Supply Chain from manufacture to home delivery that addresses the needs of at risk populations and communities; and 3) identify the readiness and the societal cost benefit of this model for use when medicine and supplies become ready for the COVID-19 outbreak Available data from HDHHS on location of vulnerable individuals and their social determinants of health will be integrated in an optimization-driven AI engine to target, map and assist health departments to prioritize their limited resources for response planning and to adapt their tactics to the needs of neighborhoods and communities.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.uta.edu/news/news-releases/2020/05/05/coronavirus-supply-chain&#34;&gt;https://www.uta.edu/news/news-releases/2020/05/05/coronavirus-supply-chain&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.nsf.gov/awardsearch/showAward?AWD_ID=2028612&#34;&gt;https://www.nsf.gov/awardsearch/showAward?AWD_ID=2028612&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Publications:&lt;/p&gt;
-&lt;p&gt;Jones, E. C., Azeem, Gohar, Jones, Erick C., and Jefferson, F., “Impacting at Risk Communities using AI to optimize the COVID-19 Pandemic Therapeutics Supply Chain”, International Supply Chain Technology Journal (ISCTJ), Vol. 6, No. 9 September 2020. DOI: &lt;a href=&#34;http://doi.org/10.20545/isctj.v06.i09.02&#34;&gt;http://doi.org/10.20545/isctj.v06.i09.02&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>This EAGER award supports fundamental research in technology-enabled supply chain design to effectively deliver therapeutics to at risk populations in an urban setting.</description>
     </item>
     
     <item>
       <title>Science in Residence and Planet Texas</title>
       <link>/project/ptscires/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
       <guid>/project/ptscires/</guid>
-      <description>&lt;p&gt;I participated in the University of Texas Grand Challange Planet Texas 2050 and the Science in Residence program. Through this experience I developed various lesson plans for K-12 students.&lt;/p&gt;
-&lt;p&gt;Planet Texas 2050 is an eight-year sprint to find solutions that will make our communities more resilient and better prepared. To do that, we’re bringing together architects, archaeologists, city planners, public health experts, geologists, engineers, computer scientists, artists — and more.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://bridgingbarriers.utexas.edu/planet-texas-2050/&#34;&gt;https://bridgingbarriers.utexas.edu/planet-texas-2050/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The University of Texas at Austin Scientist in Residence (SciRes) Program is an innovative partnership between graduate students and K-12 science teachers to bring current and innovative research to the classroom. As role models, the graduate students engage K-12 students in the excitement of scientific discovery.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.esi.utexas.edu/outreach/scires/&#34;&gt;https://www.esi.utexas.edu/outreach/scires/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;As part of Planet Texas 2050 involvement with the Science in Residence program, I created various activities and lesson plans related to the core tenants of Planet Texas 2050. These activities are available at the website below.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.esi.utexas.edu/outreach/k12-resources/pt2050_lessonplans/&#34;&gt;https://www.esi.utexas.edu/outreach/k12-resources/pt2050_lessonplans/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I also created quite a few games for this physics class using basic economics concepts. The lessons plans on the GitHub page are really just a giant list of activities.&lt;/p&gt;
-&lt;p&gt;The best activities were the light trading competition (where students had to buy and sell industries associated with the light spectrum i.e. cell phones, TV, etc.), the city building game, flotilla, and the simple card based economics game.&lt;/p&gt;
-&lt;p&gt;The flotilla game uses my monocentric model in R and adjusts inputs based on what the different groups invest in. It is available in Github and this online R notebook. It clearly illustrates how carbon taxes, traffic, parks, etc. affect a cities growth and carbon footprint.&lt;/p&gt;
-&lt;p&gt;The card based supply and demand game I got from CMU and it elegantly introduces students to the ideas they need to play most of my games.&lt;/p&gt;
-&lt;p&gt;Check out the games and lesson plans via the GitHub Link below.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/yamierick/Engineer_Living/tree/master/Learning_Activities&#34;&gt;https://github.com/yamierick/Engineer_Living/tree/master/Learning_Activities&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>A program to introduce K-12 to the joys of science</description>
     </item>
     
     <item>
       <title>SimCCS 2.0 Temporal Modfications and 45Q Credits</title>
       <link>/project/simccs/</link>
       <pubDate>Sun, 19 Jul 2020 00:00:00 +0000</pubDate>
+      
       <guid>/project/simccs/</guid>
-      <description>&lt;p&gt;The primary goal of this project is to help develop the SimCCS optimization framework. SimCCS is used to develop fossil-related infrastructure through dedicated pipelines. To date SimCCS has been principally applied to CO2 capture and storage (CCS) infrastructure, though the software’s pipeline routing could be applied to any pipeline product including oil and natural gas. This is closely aligned with Office of Fossil Energy’s mission to help the United States meet its continually growing need for secure, reasonably priced and environmentally sound fossil energy supplies.&lt;/p&gt;
-&lt;p&gt;The key objective is to enhance the SimCCS framework through a combination of one or more of software development/coding, graphical user interface (GUI) enhancement, case study development
-and data collection and visualization, user testing, and conceptual model development. We wish to investigate the 45Q credits and as such need to modify the SimCCS 2.0 framework to optimize different time periods. Adding temporal variation to SimCCS will raise unforeseen challenges but allow us to investigate new challenging problems.&lt;/p&gt;
-&lt;p&gt;Any chosen Fellow would be working alongside a dynamic team based in Los Alamos National Labs with a wide range of backgrounds including computer science, geosciences (e.g., geography, geology), and petroleum engineering.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.lanl.gov/discover/news-stories-archive/2019/August/0821-co2-software.php&#34;&gt;https://www.lanl.gov/discover/news-stories-archive/2019/August/0821-co2-software.php&lt;/a&gt;
-&lt;a href=&#34;https://simccs.org/&#34;&gt;https://simccs.org/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Updating SimCCS to vary with time and investigate thr 45Q credits</description>
     </item>
     
   </channel>

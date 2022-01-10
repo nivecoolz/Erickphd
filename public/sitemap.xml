@@ -1,405 +1,268 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>/blog/spoonful-series/01-spoonful/</loc>
+    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/blog/spoonful-series/02-spoonful/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/blog/spoonful-series/03-spoonful/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
+  </url><url>
     <loc>/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/blog/</loc>
+    <lastmod>2021-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2021-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/social/</loc>
+    <lastmod>2021-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/theme-features/</loc>
+    <lastmod>2021-01-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/style/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/color-themes/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/fonts/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/evergreen/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/evergreen/</loc>
+    <lastmod>2021-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/series/a-spoonful-of-hugo/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/spoonful-series/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/hugo-site/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/r/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
+    <lastmod>2021-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/seedling/</loc>
+    <lastmod>2021-01-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/rmarkdown/</loc>
+    <lastmod>2020-12-30T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/project/community-solar-in-the-competitive-market/</loc>
     <lastmod>2020-09-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/</loc>
     <lastmod>2020-09-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication-type/2/</loc>
-    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/authors/</loc>
-    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/benjamin-leibowicz/</loc>
-    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication/co-optimization-and-community-maximizing-the-benefits-of-distributed-electricity-and-water-technologies/</loc>
-    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/erick-jones/</loc>
-    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication_types/</loc>
-    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/</loc>
     <lastmod>2020-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/erick-jones/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/felicia-jefferson/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/gohar-azeem/</loc>
-    <lastmod>2020-09-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/publication/co-optimization-and-community-maximizing-the-benefits-of-distributed-electricity-and-water-technologies/</loc>
+    <lastmod>2020-09-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/publication/impacting-at-risk-communities-using-ai-to-optimize-the-covid-19-pandemic-therapeutics-supply-chain/</loc>
     <lastmod>2020-09-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/source-themes/</loc>
+  </url><url>
+    <loc>/tags/source-themes/</loc>
     <lastmod>2020-09-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/publication-type/1/</loc>
-    <lastmod>2020-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/dana-harmon/</loc>
-    <lastmod>2020-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/emery-wolfe/</loc>
-    <lastmod>2020-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/author/jacquie-moss/</loc>
-    <lastmod>2020-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/pathways-for-reducing-energy-burdens-in-harris-county/</loc>
     <lastmod>2020-08-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/covid-19-houston/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/ptscires/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/project/simccs/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/class_projects/slsdesign/</loc>
+  </url><url>
+    <loc>/blog/class_projects/slsdesign/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/additive-manufacturing/</loc>
+  </url><url>
+    <loc>/tags/additive-manufacturing/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/cad/</loc>
+  </url><url>
+    <loc>/tags/cad/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
+  </url><url>
+    <loc>/tags/machine-learning/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/machine-learning/</loc>
+  </url><url>
+    <loc>/categories/machine-learning/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/category/machine-learning/</loc>
+  </url><url>
+    <loc>/blog/class_projects/sentimentanalysis/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/class_projects/sentimentanalysis/</loc>
+  </url><url>
+    <loc>/tags/sls/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
+  </url><url>
+    <loc>/categories/systems-modeling/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/sls/</loc>
-    <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/category/systems-modeling/</loc>
-    <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/publication/illustrating-the-utility-of-distributed-energy-resources-with-decomposition-techniques/</loc>
     <lastmod>2020-02-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/algorithms/</loc>
+  </url><url>
+    <loc>/tags/algorithms/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/benders/</loc>
+  </url><url>
+    <loc>/tags/benders/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/column-generation/</loc>
+  </url><url>
+    <loc>/tags/column-generation/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/decomposition/</loc>
+  </url><url>
+    <loc>/tags/decomposition/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/decompo_algs/</loc>
+  </url><url>
+    <loc>/blog/orie/decompo_algs/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/lp/</loc>
+  </url><url>
+    <loc>/tags/lp/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/mip/</loc>
+  </url><url>
+    <loc>/tags/mip/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/category/orie-techniques/</loc>
+  </url><url>
+    <loc>/categories/orie-techniques/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/r-markdown/</loc>
+  </url><url>
+    <loc>/tags/r-markdown/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/benders/</loc>
+  </url><url>
+    <loc>/blog/orie/benders/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/interior-point/</loc>
+  </url><url>
+    <loc>/tags/interior-point/</loc>
     <lastmod>2020-01-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/qp/</loc>
+  </url><url>
+    <loc>/tags/qp/</loc>
     <lastmod>2020-01-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/qp_algorithms/</loc>
+  </url><url>
+    <loc>/blog/orie/qp_algorithms/</loc>
     <lastmod>2020-01-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/gurboi/</loc>
+  </url><url>
+    <loc>/tags/gurboi/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/gurobi_examples2/</loc>
+  </url><url>
+    <loc>/blog/orie/gurobi_examples2/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/gurobi/</loc>
+  </url><url>
+    <loc>/tags/gurobi/</loc>
     <lastmod>2020-01-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/gurobi_examples/</loc>
+  </url><url>
+    <loc>/blog/orie/gurobi_examples/</loc>
     <lastmod>2020-01-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/category/orie-basics/</loc>
+  </url><url>
+    <loc>/categories/orie-basics/</loc>
     <lastmod>2020-01-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/markovchains/</loc>
+  </url><url>
+    <loc>/blog/orie/markovchains/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/markov-chains/</loc>
+  </url><url>
+    <loc>/tags/markov-chains/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/statistical-testing/</loc>
+  </url><url>
+    <loc>/tags/statistical-testing/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/stochastic-processes/</loc>
+  </url><url>
+    <loc>/tags/stochastic-processes/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/lp_algorithms/</loc>
+  </url><url>
+    <loc>/blog/orie/lp_algorithms/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/rng/</loc>
+  </url><url>
+    <loc>/tags/rng/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/simulation/</loc>
+  </url><url>
+    <loc>/tags/simulation/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/simulation_basics/</loc>
+  </url><url>
+    <loc>/blog/orie/simulation_basics/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/regression/</loc>
+  </url><url>
+    <loc>/tags/regression/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/stat_basics/</loc>
+  </url><url>
+    <loc>/blog/orie/stat_basics/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/statistics/</loc>
+  </url><url>
+    <loc>/tags/statistics/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/blog/css-grid-scaffold/</loc>
+    <lastmod>2019-07-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/built-in-contact-form/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/publication/contributions-of-shared-autonomous-vehicles-to-climate-change-mitigation/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/courses/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/cities/</loc>
+  </url><url>
+    <loc>/tags/cities/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/sci_res_city2/</loc>
+  </url><url>
+    <loc>/blog/orie/sci_res_city2/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tag/systems-modeling/</loc>
+  </url><url>
+    <loc>/tags/systems-modeling/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/orie/modeling_city/</loc>
+  </url><url>
+    <loc>/blog/orie/modeling_city/</loc>
     <lastmod>2019-03-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/class_projects/austin-land-use/</loc>
+  </url><url>
+    <loc>/blog/class_projects/austin-land-use/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
+  </url><url>
+    <loc>/about/</loc>
+  </url><url>
+    <loc>/authors/</loc>
+  </url><url>
+    <loc>/authors/admin/</loc>
+  </url><url>
+    <loc>/publication/_index-old/</loc>
   </url>
-  
-  <url>
-    <loc>/privacy/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/terms/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
 </urlset>

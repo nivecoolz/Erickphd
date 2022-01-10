@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Blog That Works on Hugo Apéro</title>
+    <link>/blog/</link>
+    <description>Recent content in A Blog That Works on Hugo Apéro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Set up your social</title>
+      <link>/blog/social/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/social/</guid>
+      <description>There are five places where you can choose to show social icons. Here is the tl;dr:
+ site header (set in config.toml), site footer (set in config.toml),  homepage (set in content/_index.md),  about page in the sidebar (set in content/about/sidebar/index.md), and  contact page (set in content/form/contact.md).  Read on to learn how to set up your social icons, and how to show/hide them.
+Configure social     Wherever you end up wanting to show your social icons, you&amp;rsquo;ll need to start by setting up the links in your site config.</description>
+    </item>
+    
+    <item>
+      <title>Style your site colors</title>
+      <link>/blog/color-themes/</link>
+      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/color-themes/</guid>
+      <description>You can totally customize your site&amp;rsquo;s theme colors within minutes of creating a new site. Read on to find out how, and decide which of the three options meets your needs.
+Use a color theme     Hugo Apéro includes 8 built-in color themes that work &amp;ldquo;out of the box.&amp;rdquo; This means you can use a color theme to quickly customize the look of your site without needing to write any CSS.</description>
+    </item>
+    
+    <item>
+      <title>Style your site typography</title>
+      <link>/blog/fonts/</link>
+      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/fonts/</guid>
+      <description>As with color themes, you can completely customize your site&amp;rsquo;s fonts within minutes of creating a new site. How you do it depends on how much control and customization you need.
+Embedded fonts     Hugo Apéro includes 6 embedded fonts that work &amp;ldquo;out of the box.&amp;rdquo; We selected 3 serif and 3 sans-serif options that we thought looked good with this theme, in our humble opinions. All embedded fonts include real italics so you may emphasize to your heart&amp;rsquo;s content ❤️!</description>
+    </item>
+    
+    <item>
+      <title>An evergreen post</title>
+      <link>/blog/evergreen/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/evergreen/</guid>
+      <description>Rendering mathematical equations     Examples from the mathjax demo. But they work with katex as well.
+Rmarkdown     In .Rmarkdown documents, you can use either
+$a \ne 0$ to get inline math: \(a \ne 0\). There is no conflict with using dollar symbols regularly, because knitr automatically escapes freestanding dollar symbols.
+And you can use
+$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$ to get a math paragraph:</description>
+    </item>
+    
+    <item>
+      <title>Using panelsets</title>
+      <link>/blog/seedling/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/seedling/</guid>
+      <description>Courtesy of panelset.js by Garrick Aden-Buie, from his xaringanExtra package: https://pkg.garrickadenbuie.com/xaringanExtra/#/panelset
+For example, this panelset:
+Hello! 👋 hello
+ Goodbye 💨 goodbye
+  Was created by combining this theme&amp;rsquo;s panelset and panel shortcodes:
+{{&amp;lt; panelset class=&amp;#34;greetings&amp;#34; &amp;gt;}} {{&amp;lt; panel name=&amp;#34;Hello! :wave:&amp;#34; &amp;gt;}} hello {{&amp;lt; /panel &amp;gt;}} {{&amp;lt; panel name=&amp;#34;Goodbye :dash:&amp;#34; &amp;gt;}} goodbye {{&amp;lt; /panel &amp;gt;}} {{&amp;lt; /panelset &amp;gt;}} You could also revert to HTML as well. For example, this panelset:</description>
+    </item>
+    
+    <item>
+      <title>An Rmarkdown post</title>
+      <link>/blog/rmarkdown/</link>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/rmarkdown/</guid>
+      <description> Air quality     with(airquality, boxplot(Temp ~ Month)) with(airquality, plot(Ozone ~ Temp)) mlev &amp;lt;- levels(with(airquality, as.factor(Month))) with(airquality, plot(Ozone ~ Temp, pch = as.numeric(mlev), col = mlev)) </description>
+    </item>
+    
+    <item>
+      <title>A Selective Laser Sintering Creation - Wind Powered Tops</title>
+      <link>/blog/class_projects/slsdesign/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/class_projects/slsdesign/</guid>
+      <description>We designed a spinning top that is novel, aesthetically pleasing, durable, spins well, and whose unique fan assembly can only be made using SLS. Our design incorporates a modular top system that allows for interchangeable designs to be attached to the universal base. We designed two UT-themed attachable tops, one that is a replica of the UT model tower and the other that is a replica of the UT seal.</description>
+    </item>
+    
+    <item>
+      <title>Natural Language Processing - Sentiment Analysis</title>
+      <link>/blog/class_projects/sentimentanalysis/</link>
+      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/class_projects/sentimentanalysis/</guid>
+      <description>We investigated how different Natural Language Processing (NLP) techniques could be used to perform sentiment analysis on real user generated text data from the Sentiment140 dataset [1]. First we investigated an LSTM model before deciding on using the self-attention network code from [2] because of the possible speed and accuracy advantages. Our contributions included investigating how the training batch size and dropout rate affected the accuracy of the model and validating an existing model by reproducing it and using it with a different dataset.</description>
+    </item>
+    
+    <item>
+      <title>Decompositions Algorithms Broken Down and Explained</title>
+      <link>/blog/orie/decompo_algs/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/decompo_algs/</guid>
+      <description>This post explores how to use various decomposition techniques to solve LPs and MIPs.I have written these using Gurobi as a solver and as the mathematical formulation software.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+library(gurobi)## Warning: package &amp;#39;gurobi&amp;#39; was built under R version 4.0.2library(tictoc)library(Matrix)library(ggplot2)## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 4.</description>
+    </item>
+    
+    <item>
+      <title>Benders Decomposition Algorithm Explained</title>
+      <link>/blog/orie/benders/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/benders/</guid>
+      <description>This post explores how to use Benders Decomposition to solve LPs and MIPs.I have written these using Gurobi as a solver and as the mathematical formulation software.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+library(gurobi)## Warning: package &amp;#39;gurobi&amp;#39; was built under R version 4.0.2library(lpSolveAPI)library(tictoc)library(Matrix)library(ggplot2)## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 4.</description>
+    </item>
+    
+    <item>
+      <title>Quadratic Programming Examples and Algorithms</title>
+      <link>/blog/orie/qp_algorithms/</link>
+      <pubDate>Tue, 07 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/qp_algorithms/</guid>
+      <description>This post explores how to solve QPs by hand and with Gurobi.I have written these using Gurobi as a solver and as the mathematical formulation software.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+library(gurobi)## Warning: package &amp;#39;gurobi&amp;#39; was built under R version 4.0.2library(tictoc)library(Matrix)library(ggplot2)## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 4.</description>
+    </item>
+    
+    <item>
+      <title>Gurboi&#39;s R Examples 2</title>
+      <link>/blog/orie/gurobi_examples2/</link>
+      <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/gurobi_examples2/</guid>
+      <description>This post explores how to use Gurobi to solve more advanced LPs, MIPs, and QPs.I have written these using Gurobi as a solver and as the mathematical formulation software.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+library(gurobi)## Warning: package &amp;#39;gurobi&amp;#39; was built under R version 4.0.2library(Matrix)This example formulates and solves the following simple QP model:</description>
+    </item>
+    
+    <item>
+      <title>Gurobi Basic LP/MIP Examples</title>
+      <link>/blog/orie/gurobi_examples/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/gurobi_examples/</guid>
+      <description>This post explores how to use Gurobi to solve LPs and MIPs.I have written these using Gurobi as a solver and as the mathematical formulation software.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+library(gurobi)## Warning: package &amp;#39;gurobi&amp;#39; was built under R version 4.0.2library(Matrix)This example formulates and solves the following simple LP model:\(max: x + 2y + 3z\)</description>
+    </item>
+    
+    <item>
+      <title>Basics of Markov Chains</title>
+      <link>/blog/orie/markovchains/</link>
+      <pubDate>Sat, 04 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/markovchains/</guid>
+      <description>This post explores how to markov chains work and how to visulaize them in R.I use a R package specifically designed to visualize markov chains.I also represent these markov chains using tables.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+library(markovchain)## Warning: package &amp;#39;markovchain&amp;#39; was built under R version 4.0.2library(diagram)#Allows the use of exponential operators in matrixlibrary(expm)## Warning: package &amp;#39;expm&amp;#39; was built under R version 4.</description>
+    </item>
+    
+    <item>
+      <title>Linear Programming Examples and Applications</title>
+      <link>/blog/orie/lp_algorithms/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/lp_algorithms/</guid>
+      <description>This post explores how to use the fundamental algorithms to solve LPs.I have written these using Gurobi as a solver and as the mathematical formulation software.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+library(gurobi)## Warning: package &amp;#39;gurobi&amp;#39; was built under R version 4.0.2library(tictoc)library(Matrix)library(ggplot2)## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 4.</description>
+    </item>
+    
+    <item>
+      <title>The Basics of Simulation</title>
+      <link>/blog/orie/simulation_basics/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/simulation_basics/</guid>
+      <description>This post explores some of the basic concepts of simulation.I mostly explore these concepts using basic probablity and the built in distribution functions.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+#Ideas from Probablity Course https://www.probabilitycourse.com/chapter13/chapter13.phpset.seed(123)p &amp;lt;- 0.5n &amp;lt;- 1000U &amp;lt;- runif(n)toss &amp;lt;- as.integer(U &amp;lt; p)#cumalative number of heads a &amp;lt;- numeric(n+1)#running average of headsavg &amp;lt;- numeric(n)for(i in 2:n+1){a[i] &amp;lt;- a[i-1] + toss[i-1]avg[i-1] &amp;lt;- a[i]/(i-1)}plot(1:n, avg, type = &amp;quot;l&amp;quot;, lwd = 5, col = &amp;quot;blue&amp;quot;, ylab = &amp;quot;ProportionofHeads&amp;quot;,xlab = &amp;quot;CoinTossNumber&amp;quot;)rm(p,n,U,toss,a,avg, i)set.</description>
+    </item>
+    
+    <item>
+      <title>Statistic Basics and Linear Regression</title>
+      <link>/blog/orie/stat_basics/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/stat_basics/</guid>
+      <description>This post explores some of the basic concepts of statistics.I mostly explore these concepts using linear regression.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+#http://r-statistics.co/Linear-Regression.html#https://www.statmethods.net/stats/regression.html#http://r-statistics.co/Statistical-Tests-in-R.html#http://www.sthda.com/english/articles/40-regression-analysis/166-predict-in-r-model-predictions-and-confidence-intervals/#Dr. Sager Utexas datasetsdata &amp;lt;- read.table(&amp;#39;AustinApartmentRents1.txt&amp;#39;, header = TRUE)summary(data)## Rent Area ## Min. : 399.0 Min. : 474 ## 1st Qu.: 470.0 1st Qu.: 666 ## Median : 535.</description>
+    </item>
+    
+    <item>
+      <title>CSS Grid Scaffold</title>
+      <link>/blog/css-grid-scaffold/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/css-grid-scaffold/</guid>
+      <description>“Grid is the very first CSS module created specifically to solve the layout problems we&amp;rsquo;ve all been hacking our way around for as long as we&amp;rsquo;ve been making websites.”     — Chris House, A Complete Guide to CSS Grid Layout 1
+ Overview     Since I began building websites in Y2K, I&amp;rsquo;ve lost count how many times the phrase &amp;ldquo;&amp;hellip;there&amp;rsquo;s got to be a better way to do this&amp;rdquo; has passed my lips.</description>
+    </item>
+    
+    <item>
+      <title>Built-in Contact Form</title>
+      <link>/blog/built-in-contact-form/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/built-in-contact-form/</guid>
+      <description>Formspree makes it easy to receive submissions from HTML forms on your static website.      Functional Form     This theme has a form-to-email feature built in, thanks to the simple Formspree integration. All you need to activate the form is a valid recipient email address saved in the front matter of the form (/content/forms/contact.md). Of course, the example shown below (your@email.here) must not be used.</description>
+    </item>
+    
+    <item>
+      <title>Sim CCS City</title>
+      <link>/blog/orie/sci_res_city2/</link>
+      <pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/sci_res_city2/</guid>
+      <description>I extended the work of (Wu and Plantinga 2003) using R and certain equation modififications to investigate how the addition of a light rail line would influence a city.
+Cities have housed most of the human race since 2004 and as a result influence most of the individual, commercial, and industrial energy and GHG patterns. However, city designs, have placed amenities in isolated suburban pockets, the abundance of roads have encouraged sprawl, and zoning laws have discouraged density.</description>
+    </item>
+    
+    <item>
+      <title>Monocentric City Modeling</title>
+      <link>/blog/orie/modeling_city/</link>
+      <pubDate>Sun, 03 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/modeling_city/</guid>
+      <description>I extended the work of (Wu and Plantinga 2003) using R and certain equation modififications to investigate how the addition of a light rail line would influence a city.
+Cities have housed most of the human race since 2004 and as a result influence most of the individual, commercial, and industrial energy and GHG patterns. However, city designs, have placed amenities in isolated suburban pockets, the abundance of roads have encouraged sprawl, and zoning laws have discouraged density.</description>
+    </item>
+    
+    <item>
+      <title>Austin Land Use</title>
+      <link>/blog/class_projects/austin-land-use/</link>
+      <pubDate>Fri, 21 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/class_projects/austin-land-use/</guid>
+      <description>I compiled the land use of Austin by zoning and land use data. Furthermore, number of parking spaces and the square footage of those parking spaces by land use (single family homes, apartments and commercial buildings). Furthermore, I compared that square footage with the square footage actually in the buildings and the land area of the city of Austin. And then I used the building data I compiled to determine how much rooftop space Austin has and how much solar that could hold.</description>
+    </item>
+    
+  </channel>
+</rss>
