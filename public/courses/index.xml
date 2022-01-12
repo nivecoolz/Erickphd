@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Courses on Hugo Apéro</title>
+    <title>Projects on Erick C. Jones Jr.</title>
     <link>/courses/</link>
-    <description>Recent content in Courses on Hugo Apéro</description>
+    <description>Recent content in Projects on Erick C. Jones Jr.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 May 2019 00:00:00 +0100</lastBuildDate><atom:link href="/courses/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="/courses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Probability and Statistics (IE 3301)</title>
+      <link>/courses/prob_stat/</link>
+      <pubDate>Thu, 17 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/courses/prob_stat/</guid>
+      <description>Looking for ways to integrate Community Solar for Low-Income Households in the Competitive Market</description>
+    </item>
+    
   </channel>
 </rss>

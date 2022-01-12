@@ -1,0 +1,23 @@
+---
+## Configure sidebar content in narrow column
+author: "The Jones Lab"
+role: ""
+avatar_shape:  # circle, square, rounded, leave blank to exclude
+show_social_links: true # specify social accounts in site config
+audio_link_label: # leave blank to exclude
+link_list_label: "Collaborators" # bookmarks, elsewhere, etc.
+link_list:
+- name: Industrial, Systems, and Manufacturing Engineering, UTA
+  url: https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/industrial/
+- name: Center on Stochastic Modeling, Optimization, & Statistics (COSMOS)
+  url: https://cosmos.uta.edu/
+- name: RFID and Auto Identification Labs (RAID Labs)
+  url: https://rfid.uta.edu/
+
+
+
+
+---
+
+** index doesn't contain a body, just front matter above.
+See about/list.html in the layouts folder **
