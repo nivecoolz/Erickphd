@@ -64,8 +64,8 @@ enableEmoji = true
  # alternatively, use a built-in font-family
   # serif options: Fraunces / EB Garamond / Bitter
   # sans-serif options: Commissioner / Alegreya Sans / Metropolis
-  customtextFontFamily = "Bitter"
-  customheadingFontFamily = "EB Garamond"
+  #customtextFontFamily = "Bitter"
+  #customheadingFontFamily = "EB Garamond"
   
   # basic color options: use only color names as shown in the
   # "Color Palette" section of http://tachyons.io/docs/themes/skins/
