@@ -1,12 +1,21 @@
 ---
 ## Configure sidebar content in narrow column
 author: "The Jones Lab"
-role: ""
-avatar_shape:  # circle, square, rounded, leave blank to exclude
+role: "Research"
+avatar: /img/SApic.jpg
+avatar_shape:  square # circle, square, rounded, leave blank to exclude
 show_social_links: true # specify social accounts in site config
 audio_link_label: # leave blank to exclude
-link_list_label: "Collaborators" # bookmarks, elsewhere, etc.
+link_list_label: "Job Posting and Collaborators" # bookmarks, elsewhere, etc.
 link_list:
+- name: Job Posting - Technical Content / Graphic Designer
+  url: https://app.joinhandshake.com/stu/jobs/5783524
+- name: UTA Faculty Profile
+  url: https://www.uta.edu/academics/faculty/profile?username=jonesec
+- name: University of Texas at Arlington
+  url: https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/industrial/
+- name: Texas Horizon Counseling and Consulting
+  url: https://txshcc.com
 - name: Industrial, Systems, and Manufacturing Engineering, UTA
   url: https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/industrial/
 - name: Center on Stochastic Modeling, Optimization, & Statistics (COSMOS)

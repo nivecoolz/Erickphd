@@ -1,38 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Labs on Erick C. Jones Jr.</title>
+    <title>Lab on Erick C. Jones Jr.</title>
     <link>/lab/</link>
-    <description>Recent content in Labs on Erick C. Jones Jr.</description>
+    <description>Recent content in Lab on Erick C. Jones Jr.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="/lab/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>/lab/header/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/lab/header/</guid>
-      <description>Welcome to our lab page. We are looking for motivated students to work on a variety of projects.
-Our lab is committed to finding ways to cost effectively design, build, and operate sustainable, healthy, and social communities, in both urban and rural environments.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/lab/main/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/lab/main/</guid>
-      <description>** index doesn&amp;rsquo;t contain a body, just front matter above. See about/list.html in the layouts folder **</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/lab/sidebar/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/lab/sidebar/</guid>
-      <description>** index doesn&amp;rsquo;t contain a body, just front matter above. See about/list.html in the layouts folder **</description>
-    </item>
-    
   </channel>
 </rss>
