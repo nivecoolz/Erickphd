@@ -1,22 +1,20 @@
 ---
-date: "2020-09-17T00:00:00Z"
-external_link: ""
-image:
-  caption: Probability and Statistics (IE 3301)
-  focal_point: Smart
-#links:
-#- icon: twitter
-#  icon_pack: fab
-#  name: Follow
-#  url: https://twitter.com/georgecushen
-#slides: example
-summary: Looking for ways to integrate Community Solar for Low-Income Households in the Competitive Market
-#tags:
-title: Probability and Statistics (IE 3301)
-#url_code: ""
-#url_pdf: ""
-#url_slides: ""
-#url_video: ""
+title: "Introduction to Probability and Statistics"
+subtitle: "(IE 3301)"
+excerpt: "Topics in engineering that involve random processes. Applications and backgrounds for topics in reliability, inventory systems, and queuing problems, including absolute and conditional prob- abilities, discrete and continuous random variables, parameter estimation, hypothesis testing, and an introduction to linear regression. This course will also introduce basic programming skills and applications for statistical analyses using R and the tidyverse as well spreadsheet software (e.g., Excel, Google Sheets).
+"
+date: 2021-09-01
+date_end: ""
+show_post_time: false
+author: "Erick C. Jones Jr."
+location: "Arlington, TX"
+draft: false
+# layout options: single, single-sidebar
+layout: single
+categories:
+- course websites
+- R
+- statistics
 ---
 
 Description of Course Content:
