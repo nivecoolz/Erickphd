@@ -1,8 +1,8 @@
 ---
-date: "2022-01-10T00:00:00Z"
+date: "2022-02-10T00:00:00Z"
 external_link: ""
 image:
-  caption: From: UN
+  caption: From TC Energy
   focal_point: Smart
 #links:
 #- icon: twitter
@@ -10,9 +10,9 @@ image:
 #  name: Follow
 #  url: https://twitter.com/georgecushen
 #slides: example
-summary: Investigate the effects of 24/7 Carbon Free Energy with Macro-Energy System Modeling
+summary: Investigate the effects of 247 Carbon Free Energy with Macro-Energy System Modeling
 #tags:
-title: 24/7 Carbon Free Energy Optimization Modeling
+title: 247 Carbon Free Energy Optimization Modeling
 #url_code: ""
 #url_pdf: ""
 #url_slides: ""

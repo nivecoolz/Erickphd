@@ -2,7 +2,7 @@
 date: "2022-01-10T00:00:00Z"
 external_link: ""
 image:
-  caption: From: UN
+  caption: From GoGoro
   focal_point: Smart
 #links:
 #- icon: twitter

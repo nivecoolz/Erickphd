@@ -2,7 +2,7 @@
 date: "2022-01-10T00:00:00Z"
 external_link: ""
 image:
-  caption: From: Energy Star
+  caption: From Energy Star
   focal_point: Smart
 #links:
 #- icon: twitter
@@ -12,7 +12,7 @@ image:
 #slides: example
 summary: Investigate how heat pump adoption could affect energy usage and climate impacts.
 #tags:
-title: EV Batteries for Resilience
+title: Heat Pump for Energy Efficiency and Climate Change Mitigation
 #url_code: ""
 #url_pdf: ""
 #url_slides: ""

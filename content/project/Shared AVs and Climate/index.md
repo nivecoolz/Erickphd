@@ -2,7 +2,7 @@
 date: "2019-05-17T00:00:00Z"
 external_link: ""
 image:
-  caption: From: ITDP UC Davis
+  caption: From ITDP UC Davis
   focal_point: Smart
 #links:
 #- icon: twitter

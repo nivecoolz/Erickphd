@@ -1,8 +1,8 @@
 ---
-date: "2021-05-17T00:00:00Z"
+date: "2020-05-17T00:00:00Z"
 external_link: ""
 image:
-  caption: From: ArsTechnica
+  caption: From GRID Alternatives Colorado
   focal_point: Smart
 #links:
 #- icon: twitter
@@ -12,7 +12,7 @@ image:
 #slides: example
 summary: An Optimization Scheme for Community Solar and RWH
 #tags:
-title: Co-Optimization and Community: Community Solar and RWH
+title: Co-Optimization and Community, Community Solar and RWH
 #url_code: ""
 #url_pdf: ""
 #url_slides: ""

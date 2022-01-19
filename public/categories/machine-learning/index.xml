@@ -16,14 +16,5 @@
       <description>We investigated how different Natural Language Processing (NLP) techniques could be used to perform sentiment analysis on real user generated text data from the Sentiment140 dataset [1]. First we investigated an LSTM model before deciding on using the self-attention network code from [2] because of the possible speed and accuracy advantages. Our contributions included investigating how the training batch size and dropout rate affected the accuracy of the model and validating an existing model by reproducing it and using it with a different dataset.</description>
     </item>
     
-    <item>
-      <title>Natural Language Processing - Sentiment Analysis</title>
-      <link>/blog/nlp/sentimentanalysis/</link>
-      <pubDate>Sat, 21 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/nlp/sentimentanalysis/</guid>
-      <description>We investigated how different Natural Language Processing (NLP) techniques could be used to perform sentiment analysis on real user generated text data from the Sentiment140 dataset [1]. First we investigated an LSTM model before deciding on using the self-attention network code from [2] because of the possible speed and accuracy advantages. Our contributions included investigating how the training batch size and dropout rate affected the accuracy of the model and validating an existing model by reproducing it and using it with a different dataset.</description>
-    </item>
-    
   </channel>
 </rss>

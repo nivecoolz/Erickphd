@@ -2,7 +2,7 @@
 date: "2022-01-10T00:00:00Z"
 external_link: ""
 image:
-  caption: From: Tennessee Government Website
+  caption: From Tennessee Government Website
   focal_point: Smart
 #links:
 #- icon: twitter
@@ -12,7 +12,7 @@ image:
 #slides: example
 summary: A program to improve the efficiency of the Weatherization Assistance Program in Dallas 
 #tags:
-title: Green Warriors: Weatherization Program Improvement
+title: Green Warriors Weatherization Program Improvement
 #url_code: ""
 #url_pdf: ""
 #url_slides: ""

@@ -2,7 +2,7 @@
 date: "2022-01-10T00:00:00Z"
 external_link: ""
 image:
-  caption: From: MacBride
+  caption: From Charles MacBride
   focal_point: Smart
 #links:
 #- icon: twitter
@@ -10,7 +10,7 @@ image:
 #  name: Follow
 #  url: https://twitter.com/georgecushen
 #slides: example
-summary: Improve Green Building Throughout Entire Lifecycle: Design, Building, and Operations
+summary: Improve Green Building Throughout Entire Lifecycle (Design, Building, and Operations)
 #tags:
 title: Green Building Lifecycle Optimization
 #url_code: ""

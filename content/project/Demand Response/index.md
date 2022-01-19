@@ -2,7 +2,7 @@
 date: "2021-11-10T00:00:00Z"
 external_link: ""
 image:
-  caption: From: Decarb Europe
+  caption: From Decarb Europe
   focal_point: Smart
 #links:
 #- icon: twitter
@@ -12,7 +12,7 @@ image:
 #slides: example
 summary: Investigate Demand Response Control Algorithms
 #tags:
-title: Demand Response: COSMOS NSF Project
+title: Demand Response, COSMOS NSF Project
 #url_code: ""
 #url_pdf: ""
 #url_slides: ""

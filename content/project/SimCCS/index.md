@@ -12,7 +12,7 @@ image:
 #slides: example
 summary: Worked to upgrade the SimCCS framework by adding a temporal element.
 #tags:
-title: CCS Infrastructure Planning: SimCCS Improvements and Case STudy
+title: CCS Infrastructure Planning, SimCCS Improvements and Case Study
 #url_code: ""
 #url_pdf: ""
 #url_slides: ""

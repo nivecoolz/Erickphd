@@ -1,8 +1,8 @@
 ---
-date: "2022-01-10T00:00:00Z"
+date: "2021-10-10T00:00:00Z"
 external_link: ""
 image:
-  caption: From: UTA Sustainability
+  caption: From UTA Sustainability
   focal_point: Smart
 #links:
 #- icon: twitter
@@ -12,7 +12,7 @@ image:
 #slides: example
 summary: A project to evaluate solar and wind energy production, microgrid controls, and automation
 #tags:
-title: Microgrid Automation: Micro-Wind Turbines and Rooftop Solar
+title: Microgrid Automation, Micro-Wind Turbines and Rooftop Solar
 #url_code: ""
 #url_pdf: ""
 #url_slides: ""

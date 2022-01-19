@@ -2,7 +2,7 @@
 date: "2021-05-17T00:00:00Z"
 external_link: ""
 image:
-  caption: From: ArsTechnica
+  caption: From ArsTechnica
   focal_point: Smart
 #links:
 #- icon: twitter

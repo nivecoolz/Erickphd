@@ -11,16 +11,49 @@
     <loc>/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/community-solar-in-the-competitive-market/</loc>
-    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
+    <loc>/project/ev-battery-and-resilience/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/courses/</loc>
-    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
+    <loc>/project/heat-pump-ee-impact/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/courses/prob_stat/</loc>
-    <lastmod>2020-09-17T00:00:00+00:00</lastmod>
+    <loc>/project/green-building/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/green-warriors/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/project/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/demand-response/</loc>
+    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/campus-microgrid/</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/courses/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/course-websites/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/courses/prob_stat/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/r/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/categories/statistics/</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/ag-solar-and-desalination/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/community-solar-in-the-competitive-market/</loc>
     <lastmod>2020-09-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/publication/co-optimization-and-community-maximizing-the-benefits-of-distributed-electricity-and-water-technologies/</loc>
@@ -44,25 +77,19 @@
     <loc>/project/covid-19-houston/</loc>
     <lastmod>2020-07-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/ptscires/</loc>
-    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/project/simccs/</loc>
-    <lastmod>2020-07-19T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/community-solar-and-rwh/</loc>
+    <lastmod>2020-05-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/class_projects/sls/slsdesign/</loc>
-    <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url><url>
-    <loc>/blog/sls/slsdesign/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
   </url><url>
     <loc>/tags/additive-manufacturing/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
   </url><url>
     <loc>/tags/cad/</loc>
-    <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
   </url><url>
     <loc>/tags/machine-learning/</loc>
@@ -72,9 +99,6 @@
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
   </url><url>
     <loc>/blog/class_projects/nlp/sentimentanalysis/</loc>
-    <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url><url>
-    <loc>/blog/nlp/sentimentanalysis/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
   </url><url>
     <loc>/blog/</loc>
@@ -179,6 +203,9 @@
     <loc>/publication/contributions-of-shared-autonomous-vehicles-to-climate-change-mitigation/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/project/shared-avs-and-climate/</loc>
+    <lastmod>2019-05-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/tags/cities/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
   </url><url>
@@ -197,13 +224,15 @@
     <loc>/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/austin-land-use/austin-land-use/</loc>
-    <lastmod>2018-09-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/blog/class_projects/austin-land-use/austin-land-use/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
   </url><url>
+    <loc>/project/ptscires/</loc>
+    <lastmod>2018-07-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/about/</loc>
+  </url><url>
+    <loc>/about_org/</loc>
   </url><url>
     <loc>/test/</loc>
   </url><url>
