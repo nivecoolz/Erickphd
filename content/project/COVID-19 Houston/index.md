@@ -12,7 +12,7 @@ image:
 # slides: example
 summary: This EAGER award supports fundamental research in technology-enabled supply chain design to effectively deliver therapeutics to at risk populations in an urban setting.
 # tags: COVID-19, Houston, Vaccine, Health, Vulnerable Populations
-title: EAGER AI-Enabled Optimization of the COVID-19 Therapeutics Supply Chain to Support Community Public Health
+title: COVID-19 AI-Enabled Supply Chain Optimization
 # url_code: ""
 url_pdf: "http://doi.org/10.20545/isctj.v06.i09.02"
 url_slides: "https://arcg.is/5SSPO0"

@@ -1,5 +1,5 @@
 ---
-date: "2020-07-19T00:00:00Z"
+date: "2018-07-19T00:00:00Z"
 external_link: ""
 image:
   caption: SciRes and Planet Texas
