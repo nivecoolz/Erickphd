@@ -11,16 +11,31 @@
     <loc>/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/ev-battery-and-resilience/</loc>
-    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+    <loc>/tags/job/</loc>
+    <lastmod>2022-01-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/project/heat-pump-ee-impact/</loc>
+    <loc>/blog/job-posting/communications/commjob/</loc>
+    <lastmod>2022-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/job-posting/research/researchjob/</loc>
+    <lastmod>2022-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/</loc>
+    <lastmod>2022-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2022-01-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/ev-battery-and-resilience/</loc>
     <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/project/green-building/</loc>
     <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/project/green-warriors/</loc>
+    <lastmod>2022-01-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/project/heat-pump-ee-impact/</loc>
     <lastmod>2022-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/project/</loc>
@@ -68,9 +83,6 @@
     <loc>/tags/source-themes/</loc>
     <lastmod>2020-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url><url>
     <loc>/publication/pathways-for-reducing-energy-burdens-in-harris-county/</loc>
     <lastmod>2020-08-13T00:00:00+00:00</lastmod>
   </url><url>
@@ -101,9 +113,6 @@
     <loc>/blog/class_projects/nlp/sentimentanalysis/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
   </url><url>
-    <loc>/blog/</loc>
-    <lastmod>2020-09-21T17:20:34-05:00</lastmod>
-  </url><url>
     <loc>/tags/sls/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
   </url><url>
@@ -125,7 +134,7 @@
     <loc>/tags/decomposition/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/orie/decompo_algs/</loc>
+    <loc>/blog/orie/decomp-algorithms/decompo_algs/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/lp/</loc>
@@ -140,7 +149,7 @@
     <loc>/tags/r-markdown/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/orie/benders/</loc>
+    <loc>/blog/orie/bender-decomp/benders/</loc>
     <lastmod>2020-01-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/interior-point/</loc>
@@ -149,25 +158,25 @@
     <loc>/tags/qp/</loc>
     <lastmod>2020-01-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/orie/qp_algorithms/</loc>
+    <loc>/blog/orie/qp-modeling/qp_algorithms/</loc>
     <lastmod>2020-01-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/gurboi/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/orie/gurobi_examples2/</loc>
+    <loc>/blog/orie/gurobi-examples-2/gurobi_examples2/</loc>
     <lastmod>2020-01-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/gurobi/</loc>
     <lastmod>2020-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/orie/gurobi_examples/</loc>
+    <loc>/blog/orie/gurobi-examples/gurobi_examples/</loc>
     <lastmod>2020-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/orie-basics/</loc>
     <lastmod>2020-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/orie/markovchains/</loc>
+    <loc>/blog/orie/markov-chains/markovchains/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/markov-chains/</loc>
@@ -179,7 +188,7 @@
     <loc>/tags/stochastic-processes/</loc>
     <lastmod>2020-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/orie/lp_algorithms/</loc>
+    <loc>/blog/orie/lp-algorithms/lp_algorithms/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/rng/</loc>
@@ -188,13 +197,13 @@
     <loc>/tags/simulation/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/orie/simulation_basics/</loc>
+    <loc>/blog/orie/simulation-basics/simulation_basics/</loc>
     <lastmod>2020-01-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/regression/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/orie/stat_basics/</loc>
+    <loc>/blog/orie/stat-basics/stat_basics/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/statistics/</loc>
@@ -209,13 +218,13 @@
     <loc>/tags/cities/</loc>
     <lastmod>2020-09-21T17:20:34-05:00</lastmod>
   </url><url>
-    <loc>/blog/orie/sci_res_city2/</loc>
+    <loc>/blog/orie/sci-res-city/sci_res_city2/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/systems-modeling/</loc>
     <lastmod>2019-05-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/orie/modeling_city/</loc>
+    <loc>/blog/orie/city-modeling/modeling_city/</loc>
     <lastmod>2019-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/slides/</loc>

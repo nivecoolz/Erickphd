@@ -120,12 +120,13 @@
   
   <div class="measure-wide center mb4 mb5-l">
     <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/blog/orie/simulation_basics/" class="db">The Basics of Simulation</a></h1>
+      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/blog/orie/simulation-basics/simulation_basics/" class="db">The Basics of Simulation</a></h1>
       
     </header>
       
-      <p class="lh-copy mb4">This post explores some of the basic concepts of simulation.I mostly explore these concepts using basic probablity and the built in distribution functions.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
-#Ideas from Probablity Course <a href="https://www.probabilitycourse.com/chapter13/chapter13.php">https://www.probabilitycourse.com/chapter13/chapter13.php</a>set.seed(123)p &lt;- 0.5n &lt;- 1000U &lt;- runif(n)toss &lt;- as.integer(U &lt; p)#cumalative number of heads a &lt;- numeric(n+1)#running average of headsavg &lt;- numeric(n)for(i in 2:n+1){a[i] &lt;- a[i-1] + toss[i-1]avg[i-1] &lt;- a[i]/(i-1)}plot(1:n, avg, type = &quot;l&quot;, lwd = 5, col = &quot;blue&quot;, ylab = &quot;ProportionofHeads&quot;,xlab = &quot;CoinTossNumber&quot;)rm(p,n,U,toss,a,avg, i)set.</p>
+      <p class="lh-copy mb4">BackgroundThis post explores some of the basic concepts of simulation. I mostly explore these concepts using basic probablity and the built in distribution functions. This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+Ideas from Probablity Coursehttps://www.probabilitycourse.com/chapter13/chapter13.php
+set.seed(123) p &lt;- 0.5 n &lt;- 1000 U &lt;- runif(n) toss &lt;- as.</p>
     <footer>
       
       

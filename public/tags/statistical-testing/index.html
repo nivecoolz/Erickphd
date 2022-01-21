@@ -120,12 +120,12 @@
   
   <div class="measure-wide center mb4 mb5-l">
     <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/blog/orie/markovchains/" class="db">Basics of Markov Chains</a></h1>
+      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/blog/orie/markov-chains/markovchains/" class="db">Basics of Markov Chains</a></h1>
       
     </header>
       
-      <p class="lh-copy mb4">This post explores how to markov chains work and how to visulaize them in R.I use a R package specifically designed to visualize markov chains.I also represent these markov chains using tables.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
-library(markovchain)## Warning: package 'markovchain' was built under R version 4.0.2library(diagram)#Allows the use of exponential operators in matrixlibrary(expm)## Warning: package 'expm' was built under R version 4.</p>
+      <p class="lh-copy mb4">BackgroundThis post explores how to markov chains work and how to visulaize them in R. I use a R package specifically designed to visualize markov chains. I also represent these markov chains using tables. This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+library(markovchain) ## Warning: package &lsquo;markovchain&rsquo; was built under R version 4.1.2library(diagram) #Allows the use of exponential operators in matrix library(expm) ## Warning: package &lsquo;expm&rsquo; was built under R version 4.</p>
     <footer>
       
       
@@ -146,12 +146,13 @@ library(markovchain)## Warning: package 'markovchain' was built under R version
   
   <div class="measure-wide center mb4 mb5-l">
     <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/blog/orie/simulation_basics/" class="db">The Basics of Simulation</a></h1>
+      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/blog/orie/simulation-basics/simulation_basics/" class="db">The Basics of Simulation</a></h1>
       
     </header>
       
-      <p class="lh-copy mb4">This post explores some of the basic concepts of simulation.I mostly explore these concepts using basic probablity and the built in distribution functions.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
-#Ideas from Probablity Course <a href="https://www.probabilitycourse.com/chapter13/chapter13.php">https://www.probabilitycourse.com/chapter13/chapter13.php</a>set.seed(123)p &lt;- 0.5n &lt;- 1000U &lt;- runif(n)toss &lt;- as.integer(U &lt; p)#cumalative number of heads a &lt;- numeric(n+1)#running average of headsavg &lt;- numeric(n)for(i in 2:n+1){a[i] &lt;- a[i-1] + toss[i-1]avg[i-1] &lt;- a[i]/(i-1)}plot(1:n, avg, type = &quot;l&quot;, lwd = 5, col = &quot;blue&quot;, ylab = &quot;ProportionofHeads&quot;,xlab = &quot;CoinTossNumber&quot;)rm(p,n,U,toss,a,avg, i)set.</p>
+      <p class="lh-copy mb4">BackgroundThis post explores some of the basic concepts of simulation. I mostly explore these concepts using basic probablity and the built in distribution functions. This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+Ideas from Probablity Coursehttps://www.probabilitycourse.com/chapter13/chapter13.php
+set.seed(123) p &lt;- 0.5 n &lt;- 1000 U &lt;- runif(n) toss &lt;- as.</p>
     <footer>
       
       
@@ -172,12 +173,12 @@ library(markovchain)## Warning: package 'markovchain' was built under R version
   
   <div class="measure-wide center mb4 mb5-l">
     <header>
-      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/blog/orie/stat_basics/" class="db">Statistic Basics and Linear Regression</a></h1>
+      <h1 class="f3 mt0 mb2 lh-title underline fw4"><a href="/blog/orie/stat-basics/stat_basics/" class="db">Statistic Basics and Linear Regression</a></h1>
       
     </header>
       
-      <p class="lh-copy mb4">This post explores some of the basic concepts of statistics.I mostly explore these concepts using linear regression.This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
-#http://r-statistics.co/Linear-Regression.html#https://www.statmethods.net/stats/regression.html#http://r-statistics.co/Statistical-Tests-in-R.html#http://www.sthda.com/english/articles/40-regression-analysis/166-predict-in-r-model-predictions-and-confidence-intervals/#Dr. Sager Utexas datasetsdata &lt;- read.table('AustinApartmentRents1.txt', header = TRUE)summary(data)## Rent Area ## Min. : 399.0 Min. : 474 ## 1st Qu.: 470.0 1st Qu.: 666 ## Median : 535.</p>
+      <p class="lh-copy mb4">This post explores some of the basic concepts of statistics. I mostly explore these concepts using linear regression. This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+#http://r-statistics.co/Linear-Regression.html #https://www.statmethods.net/stats/regression.html #http://r-statistics.co/Statistical-Tests-in-R.html #http://www.sthda.com/english/articles/40-regression-analysis/166-predict-in-r-model-predictions-and-confidence-intervals/ #Dr. Sager Utexas datasets data &lt;- read.table('AustinApartmentRents1.txt', header = TRUE) summary(data) ## Rent Area ## Min. : 399.0 Min. : 474 ## 1st Qu.: 470.0 1st Qu.: 666 ## Median : 535.</p>
     <footer>
       
       

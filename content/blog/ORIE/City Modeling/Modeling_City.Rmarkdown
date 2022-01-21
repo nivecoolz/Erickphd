@@ -1,0 +1,849 @@
+---
+title: "Monocentric City Modeling"
+author: "Erick Jones"
+date: 2019-03-03
+categories: ["Systems Modeling"]
+tags: ["Systems Modeling", "Simulation", "cities"]
+---
+
+
+
+
+## Background
+
+I extended the work of (Wu and Plantinga 2003) using R and certain equation modifications to investigate how the addition of a light rail line would influence a city.
+
+Cities have housed most of the human race  since 2004 and as a result influence most of the individual, commercial, and industrial energy and GHG patterns. However, city designs, have placed amenities in isolated suburban pockets, the abundance of roads have encouraged sprawl, and zoning laws have discouraged density. Therefore, for this study I will investigate how these choices can positively or negatively influence a city’s environmental footprint.
+
+I extended the work of (Wu and Plantinga 2003) using R and certain equation modifications to investigate how the addition of a light rail line would influence a city. First, I tried to replicate their city without any parks using their parameters. Second, I made some modifications to get the city to a scale that I could represent graphically. Third, I modeled the light rail as an amenity to see the influence it has on the city. Finally, I modeled the light rail so that it reduced travel costs for the citizens close to it instead of providing an amenity value.
+The parameters I used where nearly identical to the (Wu and Plantinga 2003) parameters; however I did have to make some minor modifications. The given utility produced a much larger area then was graphically tractable, so I increased it to 6,000 for all the models excluding the original monocentric model which uses the original utility value. The transport cost for the rail is set to half of the normal transport costs (t¬¬rail=$500). The original parameters are shown in Table 1. 
+
+Wu, Jun Jie, and Andrew J. Plantinga. 2003. “The Influence of Public Open Space on Urban Spatial Structure.” Journal of Environmental Economics and Management 46 (2): 288–309. https://doi.org/10.1016/S0095-0696(03)00023-8.
+
+
+## Libraries
+
+```{r}
+library("nleqslv")
+#library(circlize)
+```
+
+
+## Model Parameters
+
+```{r}
+
+#budget 
+y <- 40000
+#distance from center (miles) vector
+x <- c(0:25)
+#transportation cost 50 cents a mile by 320 days
+t <- 1000
+#housing price per sqft vector
+p <- c(0:25)
+#housing consumption (sqft) by mile vector
+q <- c(0:25)
+#general good
+g <- c(0:25)
+#utility level
+V <- 2702
+#alpha for Cobb Douglas
+al <- .5
+#beta for development cobb-douglas
+bt <- 4/3
+#capital 
+c0 <- 0
+#land acres
+l <- .5
+#interest
+i <- .03
+#land rent/acre
+r <- c(0:25)
+#Housing floor space / acre
+s <- c(0:25)
+#ag rent
+ag <- 1000
+
+
+
+
+
+
+
+
+```
+
+
+
+## Model Equations
+
+The equations are also  nearly identical to the (Wu and Plantinga 2003) equations. I used the equations and the given parameters to calculate the optimal values at each point (u,v) for housing price (p), housing consumption (q), good consumption (g), land rent (r), housing floor space per area (s), and amenity. These optimal equations naturally satisfy the equilibrium conditions : no house moves because house prices are bid up to their maximum, no business profits because land rents are bid up to the max, the price that households are willing to pay is equal to the price businesses are willing to accept, and the floor space equals the total supply. The final equilibrium conditions that the land rent is equal to the agriculture rent at the city boundary is solved for numerically in the model.
+
+
+
+```{r}
+#monocentric original model parameters
+
+u <- c(1:50)
+v <- c(1:50)
+
+#new u,v
+
+i <- 0
+j <- 0
+ii <- 1
+
+while(i < 51){
+  
+  j <- 0
+  while(j < 51){
+  u[ii] <- i - 25
+  v[ii] <- j - 25
+  j <- j+1
+  ii <- ii+1
+  }
+  
+  i <- i +1
+  
+  }
+
+
+#finding x for various u,v
+x <- sqrt(u^2+v^2)
+
+#finding the price for various x
+p <- (al^al*(1-al)^(1-al)*(y-t*x)/V)^(1/al)
+
+#optimal q
+q <- al*(y-t*x)/p
+
+#optimal g
+g <- (1-al)*(y-t*x)
+
+
+#theta some funciton of beta
+ph <- ((bt-1)^((bt-1)/bt))/bt
+
+#optimal r
+
+r <- (ph*p)^(bt/(bt-1))
+
+r1 <- ((ph*al)^al * (1-al)^(1-al) * (y-t*x)/V)^(bt/(al*(bt-1)))
+
+#optimal s
+s <- (p/bt)^(1/(bt-1))
+
+s1 <- (bt-1)^(-1/bt) * (r)^(1/bt)
+
+#Utility Value
+
+U <- q^al*g^(1-al)
+
+
+#population n s(floorspaceperacre/ floorspace per household * (size of square (sqmi)) * acres/sqmi * fraction of housing in area)
+n <- s/q * 1 * 640 * .25 
+
+
+
+dfsc <- data.frame(u,v,x,p,g,q,s,r,U,n)
+
+#delete values where ag rent exceeds land rent
+dfsc1 <- dfsc[(dfsc$r > ag),]
+
+head(dfsc1,20)
+
+nrow(dfsc1$n)
+sum(dfsc1$n)
+
+
+```
+
+
+## The Coordinate System
+
+
+I created an x, y coordinate system with points that represented discrete area sizes. The original monocentric model has 1 square mile by 1 square mile squares, the m-Monocentric model has 0.5 square mile by 0.5 square mile squares, and both the amenity model and the rail distance model have 0.2 square mile by 0.2 square mile squares. The monocentric models’ results weren’t too interesting, so they didn’t need finely tuned points. The other models did have detailed information and empirically the 0.2 x 0.2 size squares housed at least 1 household, any smaller and their would-be fractional households. The light rail system ran right through the city center (point (0,0)) along the y axis (north- south).  A horizontal line would produce similar results. Shifting the line horizontally might produce a slight variation, but probably not enough to go through the trouble of modeling.
+Since each point represents a specific area, I can calculate the actual values for various variables rather than their rates. Then, I can simply sum up all the points to calculate the total values for these variables on the city basis. Thus, using these discrete points, I can fully characterize each modeled city numerically. I modeled all these systems and produced the various outputs in R.
+
+
+
+```{r}
+
+
+#modfied parameters
+
+#budget 
+y <- 40000
+#distance in the x axis
+u <- c(0,0,0,0,0,1,1,1,1,1,-1,-1,-1,-1,-1,2,2,2,2,2,-2,-2,-2,-2,-2)
+#distance in the y axis
+v <- c(0,1,-1,2,-2,0,1,-1,2,-2,0,1,-1,2,-2,0,1,-1,2,-2,0,1,-1,2,-2)
+#distance from center
+x <- sqrt(u^2+v^2)
+
+#transportation cost 50 cents a mile by 320 days
+t <- 1000
+#housing price per sqft vector
+p <- c(0:25)
+#housing consumption (sqft) by mile vector
+q <- c(0:25)
+#general good
+g <- c(0:25)
+#utility level
+V <- 6000
+#alpha for Cobb Douglas
+al <- .5
+#beta for development cobb-douglas
+bt <- 4/3
+#capital 
+c0 <- 0
+
+#amentiy
+ad <- 0.16
+ng <- 1
+d <- 0
+
+#gamma for amenity
+gm <- 0.5
+
+#z distance to amentiy
+z <- sqrt((u-d)^2)
+
+#land rent/acre
+r <- c(0:25)
+#Housing floor space / acre
+s <- c(0:25)
+#ag rent
+ag <- 1000
+
+```
+
+```{r}
+#monocentric with modified V
+
+u <- c(1:50)
+v <- c(1:50)
+
+#new u,v
+
+i <- 0
+j <- 0
+ii <- 1
+
+while(i < 20){
+  
+  j <- 0
+  while(j < 20){
+  u[ii] <- i/2 - 3
+  v[ii] <- j/2 - 3
+  j <- j+1
+  ii <- ii+1
+  }
+  
+  i <- i +1
+  
+  }
+
+
+#finding x for various u,v
+x <- sqrt(u^2+v^2)
+
+#finding the price for various x
+p <- (al^al*(1-al)^(1-al)*(y-t*x)/V)^(1/al)
+
+#optimal q
+q <- al*(y-t*x)/p
+
+#optimal g
+g <- (1-al)*(y-t*x)
+
+
+#theta some funciton of beta
+ph <- ((bt-1)^((bt-1)/bt))/bt
+
+#optimal r
+
+r <- (ph*p)^(bt/(bt-1))
+
+r1 <- ((ph*al)^al * (1-al)^(1-al) * (y-t*x)/V)^(bt/(al*(bt-1)))
+
+#optimal s
+s <- (p/bt)^(1/(bt-1))
+
+s1 <- (bt-1)^(-1/bt) * (r)^(1/bt)
+
+#Utility Value
+
+U <- q^al*g^(1-al)
+
+
+#population n s(floorspaceperacre/ floorspace per household * (size of square (sqmi)) * acres/sqmi * fraction of housing in area)
+n <- s/q * (.5*.5) * 640 * .25 
+
+nn <- s/q
+
+
+
+dfscm <- data.frame(u,v,x,p,g,q,s,r,U,n,nn)
+
+#delete values where ag rent exceeds land rent
+dfscm1 <- dfscm[(dfscm$r > ag),]
+
+head(dfscm1,20)
+
+nrow(dfscm1)
+sum(dfscm1$n)
+```
+
+
+```{r}
+#Amenitiy City Model
+
+
+#new u,v
+
+i <- 0
+j <- 0
+ii <- 1
+
+while(i < 61){
+  
+  j <- 0
+  while(j < 61){
+  u[ii] <- i/5 - 6
+  v[ii] <- j/5 - 6
+  j <- j+1
+  ii <- ii+1
+  }
+  
+  i <- i +1
+  
+  }
+
+
+#finding x for various u,v
+x <- sqrt(u^2+v^2)
+
+#finding distance to rail
+z <- sqrt((u-d)^2)
+
+
+#amentiy distribution
+am <- 1 + ad*(exp(-ng*z))
+
+#finding the price for various u,v
+p <- (al^al*(1-al)^(1-al)*am^gm*(y-t*x)/V)^(1/al)
+
+
+#optimal q
+q <- al*(y-t*x)/p
+
+#optimal g
+g <- (1-al)*(y-t*x)
+
+#optimal s
+s <- (p/bt)^(1/(bt-1))
+
+#optimal r
+r <- p*s - s^(bt)
+
+#population n s(floorspaceperacre/ floorspace per household * (size of square (sqmi)) * acres/sqmi * fraction of housing in area)
+n <- s/q * (.2*.2) * 640 * .25 
+
+nn <- s/q
+
+dfuva <- data.frame(u,v,x,z,p,g,q,s,r,am,n,nn)
+dfuva1 <- dfuva[(dfuva$r > ag),]
+dfuva1[(dfuva1$v > 4),]
+
+nrow(dfuva1)
+sum(dfuva1$n)
+```
+
+```{r}
+#Rail Model
+
+#values for u,v,x, and z are the same as above
+
+
+
+#convinence penalty for taking train
+cf <- 1.1
+
+#transportation distance rail traveled and travel to rail
+zz <- z+abs(v)
+
+#cost to travel by rail
+tr <- 500
+
+#rail and commute travel cost
+rtc <- (tr*abs(v)+t*abs(u))
+
+#optimal price per square foot
+
+
+p <- (al^al*(1-al)^(1-al)*(y-rtc)/V)^(1/al)
+
+
+#optimal q
+q <- al*(y-(rtc))/p
+
+#optimal g
+g <- (1-al)*(rtc)
+
+#optimal s
+s <- (p/bt)^(1/(bt-1))
+
+#optimal r
+r <- p*s - s^(bt)
+
+#population n s(floorspaceperacre/ floorspace per household * (size of square (sqmi)) * acres/sqmi * fraction of housing in area)
+n <- s/q * (.2*.2) * 640 * .25 
+
+nn <- s/q
+
+#rail customers dataframe
+dfr1 <- data.frame(u,v,x,z,zz,p,g,q,s,r,n,nn,rtc)
+
+#removes all values for people more than 1.75 miles from the train
+dfr1 <- dfr1[(dfr1$z <= 1.75),]
+dfr1 <- dfr1[(dfr1$r > ag),]
+
+#optimal price per square foot
+
+
+p <- (al^al*(1-al)^(1-al)*(y-t*x)/V)^(1/al)
+
+
+#optimal q
+q <- al*(y-t*x)/p
+
+#optimal g
+g <- (1-al)*(y-t*x)
+
+#optimal s
+s <- (p/bt)^(1/(bt-1))
+
+#optimal r
+r <- p*s - s^(bt)
+
+#population n s(floorspaceperacre/ floorspace (sqft) per household * (size of square (sqmi)) * acres/sqmi * fraction of housing in area)
+n <- s/q * (.2*.2) * 640 * .25
+
+nn <- s/q
+
+rtc <- t*x
+
+#non rail customers dataframe
+dfr2 <- data.frame(u,v,x,z,zz,p,g,q,s,r,n,nn,rtc)
+
+
+#removes all values within 1.75 of the train
+dfr2 <- dfr2[(dfr2$z > 1.75),]
+dfr2 <- dfr2[(dfr2$r > ag),]
+
+dfuv <- rbind(dfr1,dfr2)
+
+
+#getting rid of land rents less than land ag
+dfuv1 <- dfuv[!(dfuv$r<ag),]
+
+nrow(dfuv1)
+sum(dfuv1$n)
+
+#dfuv1[(dfuv1$u == 0),]
+
+
+```
+
+```{r}
+#Creating All Plots
+
+require(ggplot2)
+require(grid)
+require(gridExtra)
+require(RColorBrewer)
+require(viridis)
+
+#using s (housing area/acre)
+p1<-ggplot(dfuv1, aes(x = u, y = v, color = s)) +
+   geom_point(size = 1, shape = 19) +
+  scale_color_viridis(option = 'magma', direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal() +
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'Housing Area/Acre: \n Rail Distance Model')
+
+#using q (housing sqft for area)
+p2<-ggplot(dfuv1, aes(x = u, y = v, color = q)) +
+   geom_point(size = 1, shape = 19) +
+  scale_color_viridis(option = 'inferno') +
+  #scale_color_gradientn(colors = rainbow(10)) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal() +
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'Housing sqft / sqmi: \n Rail Distance Model')
+
+
+#using n transportation distance
+p3<-ggplot(dfuv1, aes(x = u, y = v, color = n)) +
+   geom_point(size = 1, shape = 19) +
+  scale_color_viridis(direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) + 
+  labs(title = 'Population: \n Rail Distance Model')
+
+#using am transportation distance
+p4<-ggplot(dfuva1, aes(x = u, y = v, color = am)) +
+   geom_point(size = 1, shape = 17) +
+  
+  scale_color_gradientn(colors = rainbow(7)) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'Amenity Level: \n Amentity Model')
+
+#using population for am
+p5<-ggplot(dfuva1, aes(x = u, y = v, color = n)) +
+   geom_point(size = 1, shape = 17) +
+  scale_color_viridis(direction = -1) +
+   lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'Population: \n Amenity Model')
+
+#population for original 
+
+p6<-ggplot(dfsc1, aes(x = u, y = v, color = n)) +
+   geom_point(size = 1, shape = 11) +
+  scale_color_gradientn(colors = rev(rainbow(10)))+
+  lims(x=c(-25,25),y=c(-25,25)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'Population: \n Monocentric Model')
+
+
+
+p7<-ggplot(dfscm1, aes(x = u, y = v, color = n)) +
+   geom_point(size = 2, shape = 7) +
+  
+  scale_color_viridis(direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'Population: \n m-Monocentric Model')
+
+
+
+p8<-ggplot(dfuv1, aes(x = u, y = v, color = nn)) +
+   geom_point(size = 1, shape = 19) +
+  scale_color_viridis(direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'House Density: \n Rail Distance Model')
+
+hd4<-ggplot(dfuv1, aes(x = u, y = v, color = nn)) +
+   geom_point(size = 1, shape = 19) +
+  scale_color_viridis(direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'House Density: \n Rail Distance Model')
+
+hd3<-ggplot(dfuva1, aes(x = u, y = v, color = nn)) +
+   geom_point(size = 1, shape = 17) +
+  scale_color_viridis(direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'House Density: \n Amenity Model')
+
+hd2<-ggplot(dfscm1, aes(x = u, y = v, color = nn)) +
+   geom_point(size = 2, shape = 7) +
+  scale_color_viridis(direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal()+
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'House Density: \n m-Monocentric Model')
+
+
+pr4<-ggplot(dfuv1, aes(x = u, y = v, color = p)) +
+   geom_point(size = 1, shape = 19) +
+  scale_color_viridis(option = 'magma', direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal() +
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'Housing Price: \n Rail Distance Model')
+
+pr3<-ggplot(dfuva1, aes(x = u, y = v, color = p)) +
+   geom_point(size = 1, shape = 17) +
+  scale_color_viridis(option = 'magma', direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal() +
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'House Price: \n Amenity Model')
+
+pr2<-ggplot(dfscm1, aes(x = u, y = v, color = p)) +
+   geom_point(size = 2, shape = 7) +
+  scale_color_viridis(option = 'magma', direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal() +
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'House Price: \n m-Monocentric Model')
+
+
+r4<-ggplot(dfuv1, aes(x = u, y = v, color = r)) +
+   geom_point(size = 1, shape = 19) +
+  scale_color_viridis(option = 'magma', direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal() +
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'Land Rent: \n Rail Distance Model')
+
+r3<-ggplot(dfuva1, aes(x = u, y = v, color = r)) +
+   geom_point(size = 1, shape = 17) +
+  scale_color_viridis(option = 'magma', direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal() +
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'Land Rent: \n Amenity Model')
+
+r2<-ggplot(dfscm1, aes(x = u, y = v, color = r)) +
+   geom_point(size = 2, shape = 7) +
+  scale_color_viridis(option = 'magma', direction = -1) +
+  lims(x=c(-3,3),y=c(-6,6)) +
+  coord_fixed() +  
+  theme_minimal() +
+  geom_vline(xintercept = 0) + 
+  geom_hline(yintercept = 0) +
+  labs(title = 'Land Rent: \n m-Monocentric Model')
+
+
+
+
+
+
+```
+
+```{r}
+# Displaying all graphs and Saving All Graphs
+
+
+
+
+#Population Density Across Urban Areas
+pop_den <- grid.arrange(p5,p3,p6,p7, ncol=2, nrow = 2)
+#Housing Density Across Urban Areas
+
+house_den <- grid.arrange(hd4,hd3,hd2,ncol =3, nrow =1)
+#Housing Prices Across Urban Areas
+price_grid <- grid.arrange(pr4,pr3,pr2, ncol =3, nrow =1)
+#Land Values across Urban Areas
+lv_grid <- grid.arrange(r4,r3,r2,ncol =3, nrow =1)
+#comparisons
+comp_grid <- grid.arrange(p1,p2,p4,p7, ncol=2, nrow = 2)
+
+ggsave(filename = "pop_den.pdf", pop_den)
+ggsave(filename = "house_den.pdf", house_den)
+ggsave(filename = "price_grid.pdf", price_grid)
+ggsave(filename = "lv_grid.pdf", lv_grid)
+ggsave(filename = "comp_grid.pdf", comp_grid)
+
+
+
+```
+
+```{r}
+library(formattable)
+
+#Number of People who take rail vs. commute
+rc <- nrow(dfr1)
+cc <- nrow(dfr2)
+rails <- c(0,0,.10,0)
+rails[4] <- round(rc/(rc+cc),4)
+
+
+#Transportation Expenditures
+
+c_trans1 <- round(sum(dfsc1$x*1000),0)
+c_trans2 <- round(sum(dfscm1$x*1000),0)
+c_trans3 <- round(sum(dfuva1$x)*1000,0)
+c_trans4 <- round(sum(dfuv1$rtc),0)
+
+c_trans <- rbind(c_trans1,c_trans2,c_trans3,c_trans4)
+
+
+#Transportation Energy Use and GHG Emissions 120.429 MBTU/ gal, cars average 27 mpg (EIA https://www.eia.gov/energyexplained/index.php?page=about_energy_units)
+#light rail every 15 mins for 12.5 hours 50 times every day. About 1 cars going 30 mph. Goes 1125 miles a day. 
+#64.642 MBTU/mile (http://www.rtd-fastracks.com/media/uploads/se/Energy_Tech_Report_0514_-_061814_vers.pdf)
+
+e_trans1 <- sum(dfsc1$x*dfsc1$n*365*2*120.429/27)
+e_trans2 <- sum(dfscm1$x*dfscm1$n*365*2*120.429/27)
+e_trans3 <- sum(dfuva1$x*dfuva1$n*365*2*120.429/27)*.9 + 375*365*64.642
+e_trans4 <- sum(dfr2$x*dfr2$n*365*2*120.429/27) + sum(dfr1$z*dfr1$n*365*2*120.429/27) + 375*365*64.642
+
+e_trans <- rbind(e_trans1,e_trans2,e_trans3,e_trans4)
+
+e_trans <- round(e_trans/1000,0)
+
+# GHG of trans 8.887 kg CO2 / gallon
+
+ghg_trans1 <- round(sum(dfsc1$x*dfsc1$n*365*2*8.887/(27*1000)),0)
+ghg_trans2 <- round(sum(dfscm1$x*dfscm1$n*365*2*8.887/(27*1000)),0)
+ghg_trans3 <- round((sum(dfuva1$x*dfuva1$n*365*2*8.887/(27*1000)))*.9 + 375*365*64.642/1000*((.85/3.41214/1000)/2204.6),0)
+ghg_trans4 <- round(sum(dfr2$x*dfr2$n*365*2*8.887/(27*1000)) + sum(dfr1$z*dfr1$n*365*2*8.887/(27*1000)) + 375*365*64.642/1000*((.85/3.41214/1000)/2204.6),0)
+
+tCO2_trans <- rbind(ghg_trans1,ghg_trans2,ghg_trans3,ghg_trans4)
+
+#Residenital Energy Use and GHG Emissions 40 MBTU/sq ft (https://www.jchs.harvard.edu/blog/us-households-are-using-less-energy/)
+
+
+e_res1 <- sum(dfsc1$q)*40 
+e_res2 <- sum(dfscm1$q)*40 
+e_res3 <- sum(dfuva1$q)*40 
+e_res4 <- sum(dfuv1$q)*40 
+
+e_res <- rbind(e_res1,e_res2,e_res3,e_res4)
+
+e_res <- round(e_res/1000,0)
+
+#GHG .85 lb CO2 / kwh https://data.austintexas.gov/Utilities-and-City-Services/Carbon-Intensity/hetr-8wqd
+# 3.41214 MBTU/kwh 2204.6 metric tons per pound
+
+tCO2e_res <- round(e_res*(.85/(3.41214/1000))/2204.6,0)
+
+#Total energy and GHG
+e_total <- e_res + e_trans
+
+tCO2e_total <- tCO2e_res + tCO2_trans
+
+
+#Total Land Area of the City
+
+la1 <- nrow(dfsc1)*1
+la2 <- nrow(dfscm1)*(.5*.5)
+la3 <- nrow(dfuva1)*(.2*.2)
+la4 <- nrow(dfuv1)*(.2*.2)
+
+la <- rbind(la1,la2,la3,la4)
+
+
+#Total Population
+
+
+n1 <- round(sum(dfsc1$n),0)
+n2 <- round(sum(dfscm1$n),0)
+n3 <- round(sum(dfuva1$n),0)
+n4 <- round(sum(dfuv1$n),0)
+
+nt <- rbind(n1,n2,n3,n4)
+
+#Utility
+tU <- c(2700,6000,6000,6000)
+
+s1 <- data.frame(rails, c_trans, e_trans, tCO2_trans, e_res, e_total, tCO2e_total, la, nt, tU)
+rownames(s1) <- c('Moncentric', 'Monocentric Modified', 'Amenity','Rail Distance')
+colnames(s1) <- c('% rail travel', '$_trans', 'MMBTU_trans', 'tCO2e_trans', 'MMBTU_res', 'MMBTU_total', 'tCO2e_total', 'City sqmi', 'Pop', 'Util' )
+
+
+s2 <- s1[,2:8]/s1$Pop
+colnames(s2) <- c('$_trans/house', 'MMBTU_trans/house', 'tCO2e_trans/house', 'MMBTU_res/house', 'MMBTU_total/house', 'tCO2e_total', 'Acres/house' )
+s2$`Acres/house` <- s2$`Acres/house`*640*.25
+s2 <- round(s2,2)
+s2
+
+s1$`$_trans` <- prettyNum(s1$`$_trans`, big.mark = ',')
+s1$MMBTU_trans <- prettyNum(s1$MMBTU_trans, big.mark =',')
+s1$MMBTU_res <- prettyNum(s1$MMBTU_res, big.mark =',')
+s1$MMBTU_total <- prettyNum(s1$MMBTU_total, big.mark = ',')
+s1$`% rail travel` <- percent(s1$`% rail travel`, digits = 1)
+
+s3 <- s1[,c(1,2,6,7,8,9,10)]
+
+s3
+```
+
+
+```{r}
+# Saving Files as pdfs
+
+# pdf("city_data.pdf", height=2, width=8.5)
+# grid.table(s3)
+# dev.off()
+
+# pdf("per_capita_data.pdf", height=2, width=13)
+# grid.table(s2)
+# dev.off()
+
+
+```
+
+
+```{r}
+#Solving for q and g using non-linear solver
+
+i <- 1
+
+while(i <= 16){
+
+
+fn <- function(j) {
+
+    a <- j[1]^al *j[2]^(1-al)-V
+    b <- y-t*x[i]-p[i]*j[1]-j[2]
+    
+    
+
+    return(c(a,b))
+
+}
+
+result <- nleqslv(c(500,10000), fn)  
+result$x[1] <- q[i]
+result$x[2] <- g[i]
+
+i <- i+1
+
+}
+
+head(data.frame(x,p,q,g),20)
+
+
+
+```
+
+

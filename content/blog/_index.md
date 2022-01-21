@@ -8,8 +8,9 @@ thumbnail_left: true # for list-sidebar only
 show_author_byline: true
 show_post_date: true
 show_button_links: false
+
 # for listing page layout
-layout: list-grid # list, list-sidebar, list-grid
+layout: list # list, list-sidebar, list-grid
 
 # for list-sidebar layout
 sidebar: 
@@ -21,18 +22,20 @@ sidebar:
     
     Check out the _index.md file in the /blog folder 
     to edit this content. 
-  author: "The R Markdown Team @RStudio"
+  author: "Erick C. Jones Jr."
   text_link_label: Subscribe via RSS
   text_link_url: /index.xml
   show_sidebar_adunit: true # show ad container
 
 # set up common front matter for all pages inside blog/
 cascade:
-  author: "The R Markdown Team @RStudio"
+  author: "Erick C. Jones Jr."
   show_author_byline: true
   show_post_date: true
   show_comments: true # see site config to choose Disqus or Utterances
+
   # for single-sidebar layout
+
   sidebar:
     text_link_label: View recent posts
     text_link_url: /blog/

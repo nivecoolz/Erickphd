@@ -8,8 +8,10 @@ show_social_links: true # specify social accounts in site config
 audio_link_label: # leave blank to exclude
 link_list_label: "Job Posting and Collaborators" # bookmarks, elsewhere, etc.
 link_list:
-- name: Job Posting - Technical Content / Graphic Designer
-  url: https://app.joinhandshake.com/stu/jobs/5783524
+- name: Job Posting - Communications and Digital Media Role
+  url: /blog/job-posting/commjob/
+- name: Job Posting - Research Assistant
+  url: /blog/job-posting/researchjob/
 - name: UTA Faculty Profile
   url: https://www.uta.edu/academics/faculty/profile?username=jonesec
 - name: University of Texas at Arlington
