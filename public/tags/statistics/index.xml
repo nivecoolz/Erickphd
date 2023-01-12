@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Statistics on Erick C. Jones Jr.</title>
+    <link>/tags/statistics/</link>
+    <description>Recent content in Statistics on Erick C. Jones Jr.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Statistic Basics and Linear Regression</title>
+      <link>/blog/orie/stat-basics/stat_basics/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/orie/stat-basics/stat_basics/</guid>
+      <description>Background This post explores some of the basic concepts of statistics. I mostly explore these concepts using linear regression. This is a reproducible example if you have R Studio just make sure you have installed the correct packages.
+library(DataExplorer) ## Warning: package &amp;#39;DataExplorer&amp;#39; was built under R version 4.1.2 library(tidyverse) ## Warning: package &amp;#39;tidyverse&amp;#39; was built under R version 4.1.2 ## Warning: package &amp;#39;ggplot2&amp;#39; was built under R version 4.</description>
+    </item>
+    
+  </channel>
+</rss>
