@@ -4,15 +4,13 @@ subtitle: "Assistant Professor, Industrial, Systems, and Manufacturing Engineeri
 subtitle2: "University of Texas at Arlington"
 description: "
 
-Welcome to the site of a Texas born, raised, and trained academic looking to make the world a better place through engineering and innovation. <br>
+Welcome to the site of a Texas born, raised, and trained academic working to make the world a better place through engineering and innovation. <br>
 
-<br> I currently teach Engineering Probability and Statistics at <a href='https://uta.edu/ie'>The University of Texas at Arlington</a> in the entertainment capital of Texas, Arlington home to the Dallas Cowboys and the Texas Rangers. <br>
+<br> I currently research, teach, and serve in the Industrial, Manufacturing, and Systems Engineering department at The University of Texas at Arlington (UTA). UTA is located in Arlington, the entertainment capital of Texas, home to the Dallas Cowboys and Six Flags, and the 2026 World Cup.<br>
   
-<br>I am committed to finding ways to cost effectively design, build, and operate sustainable, healthy, and social communities, in both urban and rural environments. <br>
+<br>My current research interests include investigating how the new technologies impact critical supply chains, future innovations, and people's standards of living. My lab, the Sustainable and Equitable Allocation of Resources or SEAR lab, and the people in it combine physical experimentation and multi-systems optimization modeling to evaluate research questions related to energy, supply chains, transportation, climate change, and more. <br>
 
-<br>My current research interests include investigating key questions regarding emerging trends and technologies, the interplays between the macro and systems level, how the Internet of Things (IoT) and new Information and Communication Technologies (ICT) can help create more accurate digital models, and how to use those models to control physical systems with tools like digital twins. I typically use a multi-systems optimization modeling approach, but have used other methods like regression, machine learning, systems dynamics, and agent-based modeling simulation techniques.<br>
-
-<br>My personal interests include exploring parks, museums, sports, card and board games, traveling, and drone photography.<br>
+<br>Lastly, I enjoy exploring cities on my ebike, visiting parks and museums, playing sports, card, and board games, traveling, and drone photography.<br>
 
 <br><br><b> Here to learn?</b> <br> 
 

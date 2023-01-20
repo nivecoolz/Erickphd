@@ -14,16 +14,17 @@ link_list:
 #   url: /blog/job-posting/researchjob/
 - name: UTA Faculty Profile
   url: https://www.uta.edu/academics/faculty/profile?username=jonesec
-- name: University of Texas at Arlington
-  url: https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/industrial/
-- name: Texas Horizon Counseling and Consulting
-  url: https://txshcc.com
-- name: Industrial, Systems, and Manufacturing Engineering, UTA
-  url: https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/industrial/
 - name: Center on Stochastic Modeling, Optimization, & Statistics (COSMOS)
   url: https://cosmos.uta.edu/
 - name: RFID and Auto Identification Labs (RAID Labs)
   url: https://rfid.uta.edu/
+- name: Industrial, Systems, and Manufacturing Engineering, UTA
+  url: https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/industrial/
+- name: University of Texas at Arlington
+  url: https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/industrial/
+- name: Texas Horizon Counseling and Consulting
+  url: https://txshcc.com
+
 
 
 

@@ -6,8 +6,6 @@ headline: SEAR Lab
 ---
 
 <!-- this is a subheadline -->
-Welcome to webpage for the SEAR lab run by Dr. Erick C. Jones Jr.
+Welcome to the Sustainable and Equitable Allocation of Resources or SEAR lab.
 
-We are committed to finding ways to cost effectively design, build, and operate sustainable, healthy, and social communities, in both urban and rural environments.
-
-We are currently **looking for motivated students** to work on a variety of projects!!! See postings below.
+This lab is led by Dr. Erick C. Jones Jr., an assistant professor in the Industrial, Manufacturing, and Systems Engineering Department at the University of Texas at Arlington.

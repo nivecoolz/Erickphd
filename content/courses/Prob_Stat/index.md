@@ -11,10 +11,6 @@ location: "Arlington, TX"
 draft: false
 # layout options: single, single-sidebar
 layout: single
-categories:
-- course websites
-- R
-- statistics
 ---
 
 Description of Course Content:
@@ -24,3 +20,5 @@ Topics in engineering that involve random processes. Applications and background
 Student Learning Outcomes:
 
 At the end of this course students should be able to (1) understand the basic concepts of probability theory and hypothesis testing, (2) apply those concepts to solving numerical problems, especially those relating to probability distributions, (3) collect data and perform descriptive and inferential statistical analyses, (4) use a programming language and/or other software to perform statistical analyses.
+
+Posit Cloud Workspace used in the class: https://posit.cloud/content/2801797
