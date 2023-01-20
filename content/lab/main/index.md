@@ -7,7 +7,7 @@ number_categories: 0 # set to zero to exclude
 show_intro: true
 intro: "
 
-<h1> <i class='fas fa-laptop-code'></i> SEAR labs Mission, Vision, and Methods</h1>
+<h1> <i class='fas fa-laptop-code'></i>Mission, Vision, and Methods</h1>
 
 <p><strong>Vision:</strong> The SEAR or Sustainable and Equitable Allocation of Resources Lab believes that by creating systems that properly allocate resources, we can sustainably, equitably, and resiliently meet society's needs for food, energy, and water while maintaining a high standard of living.</p>
 
@@ -16,7 +16,7 @@ intro: "
 <p><strong>Methods:</strong> We assess these problems by combining physical experimentation, data analytics, and stochastic systems optimization to provide actionable decisions and/or create scalable prototypes.</p>
 </ul>
 
-<h1> <i class='fas fa-chalkboard-teacher'></i>Techniques and Lab Capabilities</h1>
+<h1> <i class='fas fa-chalkboard-teacher'></i>Lab Capabilities</h1>
 
   We typically use a multi-systems optimization modeling approach, but have used other methods like regression, machine learning, systems dynamics, and agent-based modeling simulation techniques.
 
