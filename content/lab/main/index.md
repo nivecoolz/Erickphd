@@ -51,8 +51,13 @@ For more information please look at our <a href='/publication/'> publications </
 <li>Carbon Capture and Sequestration</li>
 <li>Climate Change</li>
 </ul>
+<h1> <i class='fas fa-chalkboard-teacher'></i>Teams</h1>
+<a href='/phdstudents/'> PHD Students<br>
+<a href='/graduatestudents/'> Project Team Leads<br></a>
+
 
 For more information please look at our <a href='/project/'> current projects </a>.
+
 
 "
 show_outro: false
